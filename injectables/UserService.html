@@ -60,6 +60,13 @@
             <code>src/user/user.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User service.</p>
+
+            </p>
 
 
 
@@ -107,12 +114,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/user/user.service.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/user/user.service.ts:11</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create user service.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -121,6 +130,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -135,6 +145,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Security SMS service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -174,8 +188,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/user/user.service.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/user/user.service.ts:23</a></div>
                 </td>
             </tr>
 
@@ -269,14 +283,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/user/user.service.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/user/user.service.ts:34</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Compare secuity.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -286,6 +302,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -300,6 +317,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Need compare user.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>type</td>
@@ -312,6 +333,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>compare type.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>security</td>
@@ -324,6 +349,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Security object.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -353,8 +382,15 @@ import { PasswordHelper } from &#x27;src/helper&#x27;;
 import { SecuritySmsService } from &#x27;src/security/security-sms.service&#x27;;
 import { UserSecurityCompareType } from &#x27;./enums&#x27;;
 
+/**
+ * User service.
+ */
 @Injectable()
 export class UserService {
+  /**
+   * Create user service.
+   * @param securitySmsService Security SMS service.
+   */
   constructor(private readonly securitySmsService: SecuritySmsService) {}
 
   /**
@@ -367,6 +403,12 @@ export class UserService {
     return await PasswordHelper.compare(password, user.password);
   }
 
+  /**
+   * Compare secuity.
+   * @param user Need compare user.
+   * @param type compare type.
+   * @param security Security object.
+   */
   async compareSecurity(
     user: User,
     type: UserSecurityCompareType,

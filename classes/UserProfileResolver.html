@@ -64,6 +64,13 @@
             <code>src/user/profile/profile.resolver.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User prifle entity resolver.</p>
+
+            </p>
 
 
 
@@ -108,12 +115,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/user/profile/profile.resolver.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/user/profile/profile.resolver.ts:13</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create user prifle entity resolver</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -122,6 +131,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -136,6 +146,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>User profile service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>prismaClient</td>
@@ -148,6 +162,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Prisma client.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -189,20 +207,22 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Mutation(undefined)<br />@AuthorizationWith()<br /></code>
+                    <code>@Mutation(undefined, {description: &#x27;Update viewer profile&#x27;})<br />@AuthorizationWith()<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/user/profile/profile.resolver.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/user/profile/profile.resolver.ts:33</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Update viewer profile.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -212,6 +232,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -226,6 +247,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Socfony execution context.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>data</td>
@@ -238,6 +263,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>User profile update input.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -273,14 +302,29 @@ import { UserProfileUpdateInput } from &#x27;./dto/profile-update.input&#x27;;
 import { UserProfileEntity } from &#x27;./entities/profile.entity&#x27;;
 import { UserProfileService } from &#x27;./profile.service&#x27;;
 
+/**
+ * User prifle entity resolver.
+ */
 @Resolver(() &#x3D;&gt; UserProfileEntity)
 export class UserProfileResolver {
+  /**
+   * Create user prifle entity resolver
+   * @param profileService User profile service.
+   * @param prismaClient Prisma client.
+   */
   constructor(
     private readonly profileService: UserProfileService,
     private readonly prismaClient: PrismaClient,
   ) {}
 
-  @Mutation(() &#x3D;&gt; UserProfileEntity)
+  /**
+   * Update viewer profile.
+   * @param context Socfony execution context.
+   * @param data User profile update input.
+   */
+  @Mutation(() &#x3D;&gt; UserProfileEntity, {
+    description: &#x27;Update viewer profile&#x27;,
+  })
   @AuthorizationWith()
   async updateViewerProfile(
     @Context() context: ExecutionContext,

@@ -178,6 +178,13 @@
         </p>
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>User module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -231,6 +238,9 @@ import { UserInterfaceResolver } from &#x27;./user-interface.resolver&#x27;;
 import { UserService } from &#x27;./user.service&#x27;;
 import { ViewerResolver } from &#x27;./viewer.resolver&#x27;;
 
+/**
+ * User module.
+ */
 @Module({
   imports: [PrismaModule, UserProfileModule, SecurityModule],
   providers: [UserService, UserInterfaceResolver, ViewerResolver],

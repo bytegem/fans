@@ -60,6 +60,13 @@
             <code>src/tencent-cloud/sms/sms.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Tencent Cloud SMS service.</p>
+
+            </p>
 
 
 
@@ -137,8 +144,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/tencent-cloud/sms/sms.service.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/tencent-cloud/sms/sms.service.ts:29</a></div>
                 </td>
             </tr>
 
@@ -215,8 +222,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/tencent-cloud/sms/sms.service.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/tencent-cloud/sms/sms.service.ts:45</a></div>
                 </td>
             </tr>
 
@@ -312,9 +319,20 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/tencent-cloud/sms/sms.service.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/tencent-cloud/sms/sms.service.ts:14</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get SMS base options.</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="../miscellaneous/variables.html#id" target="_self" >Pick&lt;SendSmsRequest, &quot;SmsSdkAppid&quot; | &quot;Sign&quot; | &quot;ExtendCode&quot; | &quot;SenderId&quot;&gt;</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -328,8 +346,14 @@ import { Client } from &#x27;tencentcloud-sdk-nodejs/tencentcloud/services/sms/v
 import { SendSmsRequest } from &#x27;tencentcloud-sdk-nodejs/tencentcloud/services/sms/v20190711/sms_models&#x27;;
 import { getCredential } from &#x27;../common&#x27;;
 
+/**
+ * Tencent Cloud SMS service.
+ */
 @Injectable()
 export class TencentCloudSmsService {
+  /**
+   * Get SMS base options.
+   */
   get baseOptions(): Pick&lt;
     SendSmsRequest,
     &#x27;SmsSdkAppid&#x27; | &#x27;Sign&#x27; | &#x27;ExtendCode&#x27; | &#x27;SenderId&#x27;

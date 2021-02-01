@@ -64,6 +64,13 @@
             <code>src/user/profile/dto/profile-update.input.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User profile update input</p>
+
+            </p>
 
 
             <p class="comment">
@@ -91,7 +98,12 @@
 import { Prisma } from &#x27;@prisma/client&#x27;;
 import { UserProfileEntity } from &#x27;../entities/profile.entity&#x27;;
 
-@InputType()
+/**
+ * User profile update input
+ */
+@InputType({
+  description: &#x27;User profile update input&#x27;,
+})
 export class UserProfileUpdateInput
   extends OmitType(
     PartialType(UserProfileEntity),

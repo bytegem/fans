@@ -60,6 +60,13 @@
             <code>src/user/profile/profile.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User profile service.</p>
+
+            </p>
 
 
 
@@ -103,12 +110,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/user/profile/profile.service.ts:5</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/user/profile/profile.service.ts:8</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create the user profile service.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -117,6 +126,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -131,6 +141,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Prisma client.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -170,14 +184,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="8"
-                            class="link-to-prism">src/user/profile/profile.service.ts:8</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="19"
+                            class="link-to-prism">src/user/profile/profile.service.ts:19</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Resolve user profile.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -187,6 +203,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -201,6 +218,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>need resolve profile user.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -227,10 +248,21 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
 import { Prisma, PrismaClient, User, UserProfile } from &#x27;@prisma/client&#x27;;
 
+/**
+ * User profile service.
+ */
 @Injectable()
 export class UserProfileService {
+  /**
+   * Create the user profile service.
+   * @param prisma Prisma client.
+   */
   constructor(private readonly prisma: PrismaClient) {}
 
+  /**
+   * Resolve user profile.
+   * @param user need resolve profile user.
+   */
   async resolveProfile(
     user:
       | User

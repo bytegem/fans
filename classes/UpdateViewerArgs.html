@@ -64,6 +64,13 @@
             <code>src/user/dto/update-viewer.args.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Update viewer args.</p>
+
+            </p>
 
 
 
@@ -135,10 +142,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/user/dto/update-viewer.args.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/user/dto/update-viewer.args.ts:20</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User update input</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -172,10 +185,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/user/dto/update-viewer.args.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/user/dto/update-viewer.args.ts:29</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Update phone need set new phone security code</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -195,17 +214,26 @@
 import { CreateAuthorizationTokenArgs } from &#x27;src/authorization-token/dto/create-authorization-token.args&#x27;;
 import { UserUpdateInput } from &#x27;./user-update.input&#x27;;
 
+/**
+ * Update viewer args.
+ */
 @ArgsType()
 export class UpdateViewerArgs extends PickType(
   CreateAuthorizationTokenArgs,
   [&#x27;security&#x27;, &#x27;type&#x27;] as const,
   ArgsType,
 ) {
+  /**
+   * User update input
+   */
   @Field(() &#x3D;&gt; UserUpdateInput, {
     description: &#x27;User update input&#x27;,
   })
   data: UserUpdateInput;
 
+  /**
+   * Update phone need set new phone security code
+   */
   @Field(() &#x3D;&gt; String, {
     nullable: true,
     description: &#x27;Update phone need set new phone security code&#x27;,

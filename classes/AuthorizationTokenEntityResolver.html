@@ -196,20 +196,22 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Query(undefined)<br />@Authorization({hasAuthorization: true, type: undefined})<br /></code>
+                    <code>@Query(undefined, {description: &#x27;Query HTTP endpoint AuthorizationTokenEntity&#x27;})<br />@Authorization({hasAuthorization: true, type: undefined})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:64</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Query HTTP endpoint AuthorizationTokenEntity</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -219,6 +221,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -233,6 +236,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>App runner execution context.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -275,20 +282,22 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Mutation(undefined)<br /></code>
+                    <code>@Mutation(undefined, {description: &#x27;Create AuthorizationTokenEntity&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="59"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:59</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="75"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:75</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create AuthorizationTokenEntity</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -298,6 +307,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -312,6 +322,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Create <code>AuthorizationTokenEntity</code> args.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -358,8 +372,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="103"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:103</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="119"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:119</a></div>
                 </td>
             </tr>
 
@@ -437,14 +451,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:37</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Resolve AuthorizationTokenEntity user field.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -454,6 +470,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -468,6 +485,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>HTTP endpoint AuthorizationToken</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -526,6 +547,10 @@ export class AuthorizationTokenEntityResolver {
     private readonly prisma: PrismaClient,
   ) {}
 
+  /**
+   * Resolve AuthorizationTokenEntity user field.
+   * @param token HTTP endpoint AuthorizationToken
+   */
   @Field(() &#x3D;&gt; ViewerEntity)
   user(
     @Parent()
@@ -543,7 +568,13 @@ export class AuthorizationTokenEntityResolver {
     });
   }
 
-  @Query(() &#x3D;&gt; AuthorizationTokenEntity)
+  /**
+   * Query HTTP endpoint AuthorizationTokenEntity
+   * @param context App runner execution context.
+   */
+  @Query(() &#x3D;&gt; AuthorizationTokenEntity, {
+    description: &#x27;Query HTTP endpoint AuthorizationTokenEntity&#x27;,
+  })
   @Authorization({
     hasAuthorization: true,
     type: HasTokenExpiredType.AUTH,
@@ -552,7 +583,13 @@ export class AuthorizationTokenEntityResolver {
     return context.authorizationToken;
   }
 
-  @Mutation(() &#x3D;&gt; AuthorizationTokenEntity)
+  /**
+   * Create AuthorizationTokenEntity
+   * @param args Create &#x60;AuthorizationTokenEntity&#x60; args.
+   */
+  @Mutation(() &#x3D;&gt; AuthorizationTokenEntity, {
+    description: &#x27;Create AuthorizationTokenEntity&#x27;,
+  })
   async createAuthorizationToken(
     @Args({
       type: () &#x3D;&gt; CreateAuthorizationTokenArgs,

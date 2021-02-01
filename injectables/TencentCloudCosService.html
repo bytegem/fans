@@ -60,6 +60,13 @@
             <code>src/tencent-cloud/cos/soc.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Tencent Cloud COS service.</p>
+
+            </p>
 
 
 
@@ -124,12 +131,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:6</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:9</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create the COS service.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -138,6 +147,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -152,6 +162,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Tencent Cloud STS service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -191,8 +205,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:36</a></div>
                 </td>
             </tr>
 
@@ -234,8 +248,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:64</a></div>
                 </td>
             </tr>
 
@@ -311,9 +325,16 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:19</a></div>
                                 </td>
                             </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get COS options.</p>
+</div>
+
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -333,7 +354,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:29</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -355,10 +376,20 @@
 import { IDHelper } from &#x27;src/helper&#x27;;
 import { TencentCloudStsService } from &#x27;../sts&#x27;;
 
+/**
+ * Tencent Cloud COS service.
+ */
 @Injectable()
 export class TencentCloudCosService {
+  /**
+   * Create the COS service.
+   * @param sts Tencent Cloud STS service.
+   */
   constructor(private readonly sts: TencentCloudStsService) {}
 
+  /**
+   * Get COS options.
+   */
   get options() {
     return {
       bucket: process.env.TENCENT_CLOUD_COS_BUCKET,

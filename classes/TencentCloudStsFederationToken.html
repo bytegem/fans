@@ -64,6 +64,13 @@
             <code>src/tencent-cloud/sts/entities/sts.entity.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Tencent Clous STS federation token</p>
+
+            </p>
 
 
             <p class="comment">
@@ -147,10 +154,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/tencent-cloud/sts/entities/sts.entity.ts:30</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/tencent-cloud/sts/entities/sts.entity.ts:52</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Tencent Cloud credentials</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -184,10 +197,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/tencent-cloud/sts/entities/sts.entity.ts:42</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/tencent-cloud/sts/entities/sts.entity.ts:70</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Tencent Cloud credentials expired ISO8601 date</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -221,10 +240,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/tencent-cloud/sts/entities/sts.entity.ts:36</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/tencent-cloud/sts/entities/sts.entity.ts:61</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Tencent Cloud credentials expired Unix time</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -244,39 +269,67 @@
 import { GetFederationTokenResponse } from &#x27;tencentcloud-sdk-nodejs/tencentcloud/services/sts/v20180813/sts_models&#x27;;
 import { Credentials } from &#x27;tencentcloud-sdk-nodejs/tencentcloud/services/sts/v20180813/sts_models&#x27;;
 
-@ObjectType()
+/**
+ * Tencent Cloud STS credentials.
+ */
+@ObjectType({
+  description: &#x27;Tencent Cloud STS credentials.&#x27;,
+})
 export class TencentCloudStsCredentials implements Credentials {
+  /**
+   * Tencent Cloud credentials token
+   */
   @Field(() &#x3D;&gt; String, {
     description: &#x27;Tencent Cloud credentials token&#x27;,
   })
   Token: string;
 
+  /**
+   * Tencent Cloud credentials secrect id
+   */
   @Field(() &#x3D;&gt; String, {
     description: &#x27;Tencent Cloud credentials secrect id&#x27;,
   })
   TmpSecretId: string;
 
+  /**
+   * Tencent Cloud credentials secrect key
+   */
   @Field(() &#x3D;&gt; String, {
     description: &#x27;Tencent Cloud credentials secrect key&#x27;,
   })
   TmpSecretKey: string;
 }
 
-@ObjectType()
+/**
+ * Tencent Clous STS federation token
+ */
+@ObjectType({
+  description: &#x27;Tencent Clous STS federation token&#x27;,
+})
 export class TencentCloudStsFederationToken
   implements GetFederationTokenResponse {
+  /**
+   * Tencent Cloud credentials
+   */
   @Field(() &#x3D;&gt; TencentCloudStsCredentials, {
     description: &#x27;Tencent Cloud credentials&#x27;,
     nullable: true,
   })
   Credentials?: TencentCloudStsCredentials;
 
+  /**
+   * Tencent Cloud credentials expired Unix time
+   */
   @Field(() &#x3D;&gt; Int, {
     description: &#x27;Tencent Cloud credentials expired Unix time.&#x27;,
     nullable: true,
   })
   ExpiredTime?: number;
 
+  /**
+   * Tencent Cloud credentials expired ISO8601 date
+   */
   @Field(() &#x3D;&gt; String, {
     description: &#x27;Tencent Cloud credentials expired ISO8601 date.&#x27;,
     nullable: true,

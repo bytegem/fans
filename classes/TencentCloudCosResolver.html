@@ -64,6 +64,13 @@
             <code>src/tencent-cloud/cos/cos.resolver.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Tencent Cloud COS credentials resolver.</p>
+
+            </p>
 
 
 
@@ -115,12 +122,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:33</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:43</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create the resolver.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -129,6 +138,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -143,6 +153,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Tencent Cloud COS service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -188,14 +202,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:55</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Resolve Tencent Cloud STS federation token.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -266,14 +282,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:51</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:72</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create Tencent Cloud COS read credential</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>    <code>Promise&lt;&gt;</code>
@@ -314,14 +332,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="65"
-                            class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:65</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="90"
+                            class="link-to-prism">src/tencent-cloud/cos/cos.resolver.ts:90</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create Tencent Cloud COS write credential</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -331,6 +351,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -345,6 +366,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p><code>AllowUploadFileType</code> item.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -386,27 +411,45 @@ import { TencentCloudStsFederationToken } from &#x27;../sts&#x27;;
 import { TencentCloudCosCredentials } from &#x27;./entities/cos.entity&#x27;;
 import { TencentCloudCosService } from &#x27;./soc.service&#x27;;
 
+/**
+ * Allow upload File MIME-type.
+ */
 export enum AllowUploadFileType {
-  // 图片
+  // Images
   JPG &#x3D; &#x27;.jpg&#x27;,
   PNG &#x3D; &#x27;.png&#x27;,
   GIF &#x3D; &#x27;.gif&#x27;,
-  // 视频
+  // Video
   MP4 &#x3D; &#x27;.mp4&#x27;,
   OGG &#x3D; &#x27;.ogg&#x27;,
-  // 音频
+  // Audio
   MP3 &#x3D; &#x27;.mp3&#x27;,
   WAV &#x3D; &#x27;.wav&#x27;,
 }
 
+/**
+ * Register &#x60;AllowUploadFileType&#x60; to GraphQL schema.
+ */
 registerEnumType(AllowUploadFileType, {
   name: &#x27;AllowUploadFileType&#x27;,
+  description: &#x27;Allow upload File MIME-type&#x27;,
 });
 
+/**
+ * Tencent Cloud COS credentials resolver.
+ */
 @Resolver(() &#x3D;&gt; TencentCloudCosCredentials)
 export class TencentCloudCosResolver {
+  /**
+   * Create the resolver.
+   * @param cosService Tencent Cloud COS service.
+   */
   constructor(private readonly cosService: TencentCloudCosService) {}
 
+  /**
+   * Resolve Tencent Cloud STS federation token.
+   * @param param SOcfony runner execution context.
+   */
   @ResolveField(() &#x3D;&gt; TencentCloudStsFederationToken)
   authorization(
     @Parent()
@@ -419,6 +462,9 @@ export class TencentCloudCosResolver {
     return authorization();
   }
 
+  /**
+   * Create Tencent Cloud COS read credential
+   */
   @Mutation(() &#x3D;&gt; TencentCloudCosCredentials, {
     description: &#x27;Create Tencent Cloud COS read credential&#x27;,
   })
@@ -432,6 +478,10 @@ export class TencentCloudCosResolver {
     });
   }
 
+  /**
+   * Create Tencent Cloud COS write credential
+   * @param type &#x60;AllowUploadFileType&#x60; item.
+   */
   @Mutation(() &#x3D;&gt; TencentCloudCosCredentials, {
     description: &#x27;Create Tencent Cloud COS write credential&#x27;,
   })

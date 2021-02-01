@@ -64,6 +64,13 @@
             <code>src/user/dto/user-update.input.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User update input.</p>
+
+            </p>
 
 
             <p class="comment">
@@ -139,10 +146,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/user/dto/user-update.input.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/user/dto/user-update.input.ts:25</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User new password.</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -162,7 +175,12 @@
 import { Prisma } from &#x27;@prisma/client&#x27;;
 import { ViewerEntity } from &#x27;../entities/viewer.entity&#x27;;
 
-@InputType()
+/**
+ * User update input.
+ */
+@InputType({
+  description: &#x27;User update input&#x27;,
+})
 export class UserUpdateInput
   extends PartialType(
     PickType(ViewerEntity, [&#x27;email&#x27;, &#x27;login&#x27;, &#x27;phone&#x27;]),
@@ -170,6 +188,9 @@ export class UserUpdateInput
   )
   implements
     Pick&lt;Prisma.UserUpdateInput, &#x27;login&#x27; | &#x27;phone&#x27; | &#x27;email&#x27; | &#x27;password&#x27;&gt; {
+  /**
+   * User new password.
+   */
   @Field(() &#x3D;&gt; String, {
     description: &#x27;User new password&#x27;,
     nullable: true,

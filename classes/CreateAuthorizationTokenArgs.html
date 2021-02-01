@@ -64,6 +64,13 @@
             <code>src/authorization-token/dto/create-authorization-token.args.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Create authorization token args</p>
+
+            </p>
 
 
 
@@ -137,10 +144,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/authorization-token/dto/create-authorization-token.args.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/authorization-token/dto/create-authorization-token.args.ts:32</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Create AuthorizationToken security value</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -173,10 +186,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/authorization-token/dto/create-authorization-token.args.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/authorization-token/dto/create-authorization-token.args.ts:24</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Create AuthorizationToken security type</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -209,10 +228,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/authorization-token/dto/create-authorization-token.args.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/authorization-token/dto/create-authorization-token.args.ts:16</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User find where unique input</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -232,18 +257,30 @@
 import { UserWhereUniqueInput } from &#x27;src/user/dto&#x27;;
 import { UserSecurityCompareType } from &#x27;src/user/enums&#x27;;
 
+/**
+ * Create authorization token args
+ */
 @ArgsType()
 export class CreateAuthorizationTokenArgs {
+  /**
+   * User find where unique input
+   */
   @Field(() &#x3D;&gt; UserWhereUniqueInput, {
     description: &#x27;User find where unique input&#x27;,
   })
   user: UserWhereUniqueInput;
 
+  /**
+   * Create AuthorizationToken security type
+   */
   @Field(() &#x3D;&gt; UserSecurityCompareType, {
     description: &#x27;Create AuthorizationToken security type&#x27;,
   })
   type: UserSecurityCompareType;
 
+  /**
+   * Create AuthorizationToken security value
+   */
   @Field(() &#x3D;&gt; String, {
     description: &#x27;Create AuthorizationToken security value&#x27;,
   })

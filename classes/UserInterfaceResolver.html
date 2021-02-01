@@ -64,6 +64,13 @@
             <code>src/user/user-interface.resolver.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>GraphQL user interface resolver.</p>
+
+            </p>
 
 
 
@@ -107,12 +114,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/user/user-interface.resolver.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/user/user-interface.resolver.ts:11</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create GraphQL user interface resolver</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -121,6 +130,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -135,6 +145,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>User profile service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -180,14 +194,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/user/user-interface.resolver.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/user/user-interface.resolver.ts:23</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Resolve user profile field.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -197,6 +213,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -211,6 +228,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Parent context user.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -244,10 +265,21 @@ import { UserInterface } from &#x27;./entities/user.interface&#x27;;
 import { UserProfileEntity } from &#x27;./profile/entities/profile.entity&#x27;;
 import { UserProfileService } from &#x27;./profile/profile.service&#x27;;
 
+/**
+ * GraphQL user interface resolver.
+ */
 @Resolver(() &#x3D;&gt; UserInterface)
 export class UserInterfaceResolver {
+  /**
+   * Create GraphQL user interface resolver
+   * @param userProfileService User profile service.
+   */
   constructor(private readonly userProfileService: UserProfileService) {}
 
+  /**
+   * Resolve user profile field.
+   * @param user Parent context user.
+   */
   @ResolveField(() &#x3D;&gt; UserProfileEntity)
   profile(@Parent() user: User) {
     return this.userProfileService.resolveProfile(user);

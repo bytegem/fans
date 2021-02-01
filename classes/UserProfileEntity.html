@@ -64,6 +64,13 @@
             <code>src/user/profile/entities/profile.entity.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User profile entity.</p>
+
+            </p>
 
 
             <p class="comment">
@@ -152,10 +159,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/user/profile/entities/profile.entity.ts:20</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/user/profile/entities/profile.entity.ts:34</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User avatar storage path</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -188,10 +201,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/user/profile/entities/profile.entity.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/user/profile/entities/profile.entity.ts:43</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User bio</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -224,10 +243,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/user/profile/entities/profile.entity.ts:32</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/user/profile/entities/profile.entity.ts:52</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User location string</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -260,10 +285,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/user/profile/entities/profile.entity.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/user/profile/entities/profile.entity.ts:25</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User name</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -296,10 +327,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/user/profile/entities/profile.entity.ts:38</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/user/profile/entities/profile.entity.ts:61</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User profile updated at</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -332,10 +369,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/user/profile/entities/profile.entity.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/user/profile/entities/profile.entity.ts:16</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Profile owner ID</p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -353,37 +396,60 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, GraphQLISODateTime, ID, ObjectType } from &#x27;@nestjs/graphql&#x27;;
 
-@ObjectType()
+/**
+ * User profile entity.
+ */
+@ObjectType({
+  description: &#x27;User profile entity&#x27;,
+})
 export class UserProfileEntity implements UserProfileEntity {
-  @Field((type) &#x3D;&gt; ID, {
+  /**
+   * Profile owner ID
+   */
+  @Field(() &#x3D;&gt; ID, {
     description: &#x27;Profile owner ID&#x27;,
   })
   userId: string;
 
+  /**
+   * User name
+   */
   @Field((type) &#x3D;&gt; String, {
     description: &#x27;User name.&#x27;,
     nullable: true,
   })
   name: string;
 
+  /**
+   * User avatar storage path
+   */
   @Field((type) &#x3D;&gt; String, {
     description: &#x27;User avatar storage path.&#x27;,
     nullable: true,
   })
   avatar: string;
 
+  /**
+   * User bio
+   */
   @Field((type) &#x3D;&gt; String, {
     description: &#x27;User bio.&#x27;,
     nullable: true,
   })
   bio: string;
 
+  /**
+   * User location string
+   */
   @Field((type) &#x3D;&gt; String, {
     description: &#x27;User location string.&#x27;,
     nullable: true,
   })
   location: string;
 
+  /**
+   * User profile updated at
+   */
   @Field((type) &#x3D;&gt; GraphQLISODateTime, {
     description: &#x27;User profile updated at.&#x27;,
     nullable: true,

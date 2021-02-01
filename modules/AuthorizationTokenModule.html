@@ -166,6 +166,13 @@
         </p>
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>Authorization token module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -214,6 +221,9 @@ import { UserModule } from &#x27;src/user/user.module&#x27;;
 import { AuthorizationTokenEntityResolver } from &#x27;./authorization-token.resolver&#x27;;
 import { AuthorizationTokenService } from &#x27;./authorization-token.service&#x27;;
 
+/**
+ * Authorization token module.
+ */
 @Global()
 @Module({
   imports: [PrismaModule, UserModule],

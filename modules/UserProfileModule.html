@@ -154,6 +154,13 @@
         </p>
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>User profile module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -198,6 +205,9 @@ import { PrismaModule } from &#x27;src/prisma&#x27;;
 import { UserProfileResolver } from &#x27;./profile.resolver&#x27;;
 import { UserProfileService } from &#x27;./profile.service&#x27;;
 
+/**
+ * User profile module.
+ */
 @Module({
   imports: [PrismaModule],
   providers: [UserProfileService, UserProfileResolver],

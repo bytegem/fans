@@ -170,6 +170,13 @@
         </p>
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p>Root app module.</p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -216,6 +223,9 @@ import { AuthorizationGuard } from &#x27;./authorization.guard&#x27;;
 import { PrismaClient } from &#x27;@prisma/client&#x27;;
 import { TencentCloudModule } from &#x27;./tencent-cloud&#x27;;
 
+/**
+ * Root app module.
+ */
 @Global()
 @Module({
   imports: [

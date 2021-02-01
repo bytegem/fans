@@ -64,6 +64,13 @@
             <code>src/user/user.resolver.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>User entity resolver</p>
+
+            </p>
 
 
 
@@ -107,12 +114,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/user/user.resolver.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/user/user.resolver.ts:12</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create user entity resolver.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -121,6 +130,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -135,6 +145,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Prisma client.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -174,20 +188,22 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Query(undefined, {description: &#x27;Query a user where unique.&#x27;})<br /></code>
+                    <code>@Query(undefined, {description: &#x27;query where.&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/user/user.resolver.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/user/user.resolver.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Query a user where unique</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -197,6 +213,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -211,6 +228,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Query a user where unique</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -245,12 +266,23 @@ import { UserWhereUniqueInput } from &#x27;./dto&#x27;;
 import { UserEntity } from &#x27;./entities/user.entity&#x27;;
 import { UserUnion } from &#x27;./entities/user.union&#x27;;
 
+/**
+ * User entity resolver
+ */
 @Resolver(() &#x3D;&gt; UserEntity)
 export class UserResolver {
+  /**
+   * Create user entity resolver.
+   * @param prismaClient Prisma client.
+   */
   constructor(private readonly prismaClient: PrismaClient) {}
 
+  /**
+   * Query a user where unique
+   * @param where Query a user where unique
+   */
   @Query(() &#x3D;&gt; UserUnion, {
-    description: &#x27;Query a user where unique.&#x27;,
+    description: &#x27;query where.&#x27;,
   })
   user(
     @Args({

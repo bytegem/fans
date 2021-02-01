@@ -64,6 +64,13 @@
             <code>src/execution-context.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Socfony execution context.</p>
+
+            </p>
 
 
 
@@ -145,12 +152,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/execution-context.ts:4</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/execution-context.ts:7</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create a execution context.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -159,6 +168,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -173,6 +183,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Express request.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>authorizationToken</td>
@@ -185,6 +199,10 @@
                                                             Yes
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Authorization token</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>user</td>
@@ -197,6 +215,10 @@
                                                             Yes
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>User.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -234,10 +256,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/execution-context.ts:7</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/execution-context.ts:16</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Authorization token</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -262,10 +289,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/execution-context.ts:6</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/execution-context.ts:15</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">Express request.</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -291,10 +323,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/execution-context.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/execution-context.ts:17</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description">User.</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -330,8 +367,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/execution-context.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/execution-context.ts:24</a></div>
                 </td>
             </tr>
 
@@ -424,8 +461,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/execution-context.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/execution-context.ts:73</a></div>
                 </td>
             </tr>
 
@@ -518,8 +555,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/execution-context.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/execution-context.ts:54</a></div>
                 </td>
             </tr>
 
@@ -586,7 +623,16 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Request } from &#x27;express&#x27;;
 import { AuthorizationToken, Prisma, PrismaClient, User } from &#x27;@prisma/client&#x27;;
 
+/**
+ * Socfony execution context.
+ */
 export class ExecutionContext {
+  /**
+   * Create a execution context.
+   * @param request Express request.
+   * @param authorizationToken Authorization token
+   * @param user User.
+   */
   private constructor(
     public request: Request,
     public authorizationToken?: AuthorizationToken,
@@ -597,7 +643,10 @@ export class ExecutionContext {
    * Create kernel context.
    * @param request Express request.
    */
-  static async create(prismaClient: PrismaClient, request: Request): Promise&lt;ExecutionContext&gt; {
+  static async create(
+    prismaClient: PrismaClient,
+    request: Request,
+  ): Promise&lt;ExecutionContext&gt; {
     const token &#x3D; this.getHttpAuthorization(request);
     if (
       request.context &amp;&amp;

@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>AuthDecoratorOptions</li>
+  <li>SocfonyConfig</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,16 +62,9 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/authorization.decorator.ts</code>
+            <code>src/app.config.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Auth Decorator Options.</p>
-
-            </p>
 
 
         <section>
@@ -87,12 +80,13 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#hasAuthorization">hasAuthorization</a>
+                                        <a href="#endpoint">endpoint</a>
                                 </li>
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#type">type</a>
+                                        <a href="#isProduction">isProduction</a>
+                                </li>
+                                <li>
+                                        <a href="#port">port</a>
                                 </li>
                             </ul>
                         </td>
@@ -109,13 +103,48 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="hasAuthorization"></a>
-                                        <span class="name"><b>hasAuthorization</b><a href="#hasAuthorization"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="endpoint"></a>
+                                        <span class="name"><b>endpoint</b><a href="#endpoint"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>hasAuthorization:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>endpoint:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>GraphQL endpoint</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="isProduction"></a>
+                                        <span class="name"><b>isProduction</b><a href="#isProduction"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>isProduction:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -128,28 +157,29 @@
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Is production.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="type"></a>
-                                        <span class="name"><b>type</b><a href="#type"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="port"></a>
+                                        <span class="name"><b>port</b><a href="#port"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>type:         <code><a href="../miscellaneous/enumerations.html#HasTokenExpiredType" target="_self" >HasTokenExpiredType</a></code>
+                                        <code>port:     <code>string | number</code>
 </code>
                                     </td>
                                 </tr>
@@ -157,20 +187,21 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#HasTokenExpiredType" target="_self" >HasTokenExpiredType</a></code>
+                                            <i>Type : </i>    <code>string | number</code>
 
                                         </td>
                                     </tr>
 
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
 
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>App runner port</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -178,56 +209,52 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { applyDecorators, SetMetadata, UseGuards } from &#x27;@nestjs/common&#x27;;
-import {
-  AUTH_METADATA_HAS_AUTHORIZATION,
-  AUTH_METADATA_HAS_AUTHORIZATION_TYPE,
-} from &#x27;./authorization-token/constants&#x27;;
-import { HasTokenExpiredType } from &#x27;./authorization-token/enums&#x27;;
-import { AuthorizationGuard } from &#x27;./authorization.guard&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Logger } from &#x27;@nestjs/common&#x27;;
+import { config as dontEnvConfig } from &#x27;dotenv&#x27;;
 
-/**
- * Auth Decorator Options.
- */
-export interface AuthDecoratorOptions {
-  hasAuthorization?: boolean;
-  type?: HasTokenExpiredType;
+export interface SocfonyConfig {
+  /**
+   * Is production.
+   */
+  isProduction: boolean;
+
+  /**
+   * App runner port
+   */
+  port: string | number;
+
+  /**
+   * GraphQL endpoint
+   */
+  endpoint: string;
 }
 
 /**
- * Need validate HTTP endpoint &#x60;Authorization&#x60; token decorator.
- * @param param validate HTTP endpoit &#x60;Authorization&#x60; token options.
- * @param param.hasAuthorization Has need validate
- * @param param.type validate token type.
+ * Load Socfony ENV config file.
+ * @param path ENV file path.
  */
-export function Authorization(options?: AuthDecoratorOptions) {
-  return applyDecorators(
-    SetMetadata(AUTH_METADATA_HAS_AUTHORIZATION, options?.hasAuthorization),
-    SetMetadata(
-      AUTH_METADATA_HAS_AUTHORIZATION_TYPE,
-      options?.type || HasTokenExpiredType.AUTH,
-    ),
-    UseGuards(AuthorizationGuard),
-  );
+export function loadConfig(path?: string) {
+  const logger &#x3D; new Logger(&#x27;Socfony&#x27;);
+  const { error } &#x3D; dontEnvConfig({ path });
+  if (error) {
+    logger.error(error.message);
+    process.exit(1);
+  }
+
+  logger.log(&#x60;Loaded &quot;${path || &#x27;.env&#x27;}&quot; dot env config file.&#x60;);
 }
 
 /**
- * Http auth validate token.
+ * Get app config.
+ * @returns {@like SocfonyConfig}
  */
-export const AuthorizationWith &#x3D; () &#x3D;&gt;
-  Authorization({
-    hasAuthorization: true,
-    type: HasTokenExpiredType.AUTH,
-  });
-
-/**
- * Http auth, without validate token.
- */
-export const AuthorizationWithout &#x3D; () &#x3D;&gt;
-  Authorization({
-    hasAuthorization: false,
-    type: HasTokenExpiredType.AUTH,
-  });
+export function getConfig(): SocfonyConfig {
+  return {
+    isProduction: process.env.NODE_ENV &#x3D;&#x3D;&#x3D; &#x27;production&#x27;,
+    port: process.env.CLIENT_SERVER_PORT || 3000,
+    endpoint: process.env.CLIENT_GRAPHQL_ENDPOINT || &#x27;/&#x27;,
+  };
+}
 </code></pre>
     </div>
 </div>
@@ -255,7 +282,7 @@ export const AuthorizationWithout &#x3D; () &#x3D;&gt;
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthDecoratorOptions.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SocfonyConfig.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

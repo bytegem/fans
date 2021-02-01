@@ -64,6 +64,13 @@
             <code>src/security/security-sms.resolver.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Security SMS resolver.</p>
+
+            </p>
 
 
 
@@ -112,12 +119,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/security/security-sms.resolver.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/security/security-sms.resolver.ts:13</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create the resolver.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -126,6 +135,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -140,6 +150,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Secyrity SMS service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -181,20 +195,22 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Mutation(undefined)<br /></code>
+                    <code>@Mutation(undefined, {description: &#x27;Create a security SMS code for phone number&#x27;})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/security/security-sms.resolver.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/security/security-sms.resolver.ts:27</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create a security SMS code for phone number.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -204,6 +220,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -218,6 +235,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Need create Security SMS code phone number.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -260,20 +281,22 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Mutation(undefined)<br />@Authorization({hasAuthorization: true, type: undefined})<br /></code>
+                    <code>@Mutation(undefined, {description: &#x27;Create the viewer security SMS code&#x27;})<br />@Authorization({hasAuthorization: true, type: undefined})<br /></code>
                 </td>
             </tr>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/security/security-sms.resolver.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/security/security-sms.resolver.ts:47</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create the viewer security SMS code.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -283,6 +306,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -297,6 +321,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Socfony app execution context.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -332,11 +360,24 @@ import { Context } from &#x27;src/context.decorator&#x27;;
 import { ExecutionContext } from &#x27;src/execution-context&#x27;;
 import { SecuritySmsService } from &#x27;./security-sms.service&#x27;;
 
+/**
+ * Security SMS resolver.
+ */
 @Resolver()
 export class SecuritySmsResolver {
+  /**
+   * Create the resolver.
+   * @param securitySmsService Secyrity SMS service.
+   */
   constructor(private readonly securitySmsService: SecuritySmsService) {}
 
-  @Mutation(() &#x3D;&gt; GraphQLISODateTime)
+  /**
+   * Create a security SMS code for phone number.
+   * @param phone Need create Security SMS code phone number.
+   */
+  @Mutation(() &#x3D;&gt; GraphQLISODateTime, {
+    description: &#x27;Create a security SMS code for phone number&#x27;,
+  })
   async createSecurity(
     @Args({
       name: &#x27;phone&#x27;,
@@ -349,7 +390,13 @@ export class SecuritySmsResolver {
     return expiredAt;
   }
 
-  @Mutation(() &#x3D;&gt; GraphQLISODateTime)
+  /**
+   * Create the viewer security SMS code.
+   * @param context Socfony app execution context.
+   */
+  @Mutation(() &#x3D;&gt; GraphQLISODateTime, {
+    description: &#x27;Create the viewer security SMS code&#x27;,
+  })
   @Authorization({ hasAuthorization: true, type: HasTokenExpiredType.AUTH })
   async createViewerSecurity(@Context() context: ExecutionContext) {
     const { phone } &#x3D; context.user || {};
