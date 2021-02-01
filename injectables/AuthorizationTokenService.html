@@ -1,0 +1,805 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Socfony Server</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Socfony Server</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>AuthorizationTokenService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/authorization-token/authorization-token.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createTokenWithSecurity">createTokenWithSecurity</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createUserAuthorizationToken">createUserAuthorizationToken</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getTokenExpiredIn">getTokenExpiredIn</a>
+                            </li>
+                            <li>
+                                <a href="#hasTokenExpired">hasTokenExpired</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#refreshAuthorizationToken">refreshAuthorizationToken</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(prisma: PrismaClient, userService: <a href="../injectables/UserService.html">UserService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/authorization-token/authorization-token.service.ts:22</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>prisma</td>
+                                                  
+                                                        <td>
+                                                                    <code>PrismaClient</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTokenWithSecurity"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createTokenWithSecurity
+                        </b>
+                        <a href="#createTokenWithSecurity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTokenWithSecurity(user: User, type: <a href="../undefineds/UserSecurityCompareType.html">UserSecurityCompareType</a>, security: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                            <code>User</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#UserSecurityCompareType" target="_self" >UserSecurityCompareType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>security</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createUserAuthorizationToken"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createUserAuthorizationToken
+                        </b>
+                        <a href="#createUserAuthorizationToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createUserAuthorizationToken(user: User | string)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create authorization token object for user.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                            <code>User | string</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Create authoprization token object user.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#Authorization" target="_self" >Promise&lt;AuthorizationToken&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTokenExpiredIn"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getTokenExpiredIn
+                        </b>
+                        <a href="#getTokenExpiredIn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getTokenExpiredIn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get token expired in validity period.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/AuthorizationTokenValidityPeriod.html" target="_self" >Promise&lt;AuthorizationTokenValidityPeriod&gt;</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="hasTokenExpired"></a>
+                    <span class="name">
+                        <b>
+                            hasTokenExpired
+                        </b>
+                        <a href="#hasTokenExpired"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>hasTokenExpired(token: <a href="../undefineds/Authorization.html">AuthorizationToken</a>, type: <a href="../undefineds/HasTokenExpiredType.html">HasTokenExpiredType</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Has authorization token expired.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>token</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#Authorization" target="_self" >AuthorizationToken</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/enumerations.html#HasTokenExpiredType" target="_self" >HasTokenExpiredType</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Validate type.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshAuthorizationToken"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            refreshAuthorizationToken
+                        </b>
+                        <a href="#refreshAuthorizationToken"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>refreshAuthorizationToken(authorizationToken: <a href="../undefineds/Authorization.html">AuthorizationToken</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Refresh authorization token object to database.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>authorizationToken</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/functions.html#Authorization" target="_self" >AuthorizationToken</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Await refresh authorization token object.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#Authorization" target="_self" >Promise&lt;AuthorizationToken&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { AuthorizationToken, PrismaClient, User } from &#x27;@prisma/client&#x27;;
+import * as dayjs from &#x27;dayjs&#x27;;
+import {
+  AUTHORIZATION_TOKEN_NOT_FOUND,
+  SECURITY_COMPARE_FAILED,
+} from &#x27;src/constants&#x27;;
+import { IDHelper } from &#x27;src/helper&#x27;;
+import { UserService } from &#x27;src/user/user.service&#x27;;
+import { UserSecurityCompareType } from &#x27;src/user/enums&#x27;;
+import {
+  AUTH_TOKEN_DEFAULT_EXPORED_IN,
+  AUTH_TOKEN_DEFAULT_EXPORED_UNIT,
+  AUTH_TOKEN_DEFAULT_REFRESH_EXPORED_IN,
+  AUTH_TOKEN_DEFAULT_REFRESH_EXPORED_UNIT,
+  AUTH_TOKEN_VVALIDITY_PERIOD_KEY,
+} from &#x27;./constants&#x27;;
+import { HasTokenExpiredType } from &#x27;./enums&#x27;;
+import { AuthorizationTokenValidityPeriod } from &#x27;./types&#x27;;
+
+@Injectable()
+export class AuthorizationTokenService {
+  constructor(
+    private readonly prisma: PrismaClient,
+    private readonly userService: UserService,
+  ) {}
+
+  /**
+   * Get token expired in validity period.
+   */
+  async getTokenExpiredIn(): Promise&lt;AuthorizationTokenValidityPeriod&gt; {
+    const setting &#x3D; await this.prisma.setting.findUnique({
+      where: {
+        namespace_name: {
+          namespace: &#x27;system&#x27;,
+          name: AUTH_TOKEN_VVALIDITY_PERIOD_KEY,
+        },
+      },
+      rejectOnNotFound: false,
+    });
+    const { value &#x3D; {} } &#x3D; setting || {};
+    const { expiredIn &#x3D; {}, refreshExpiredIn &#x3D; {} } &#x3D; value as any;
+
+    return {
+      expiredIn: {
+        value: expiredIn.value || AUTH_TOKEN_DEFAULT_EXPORED_IN,
+        unit: expiredIn.unit || AUTH_TOKEN_DEFAULT_EXPORED_UNIT,
+      },
+      refreshExpiredIn: {
+        value: refreshExpiredIn.value || AUTH_TOKEN_DEFAULT_REFRESH_EXPORED_IN,
+        unit: refreshExpiredIn.unit || AUTH_TOKEN_DEFAULT_REFRESH_EXPORED_UNIT,
+      },
+    };
+  }
+
+  /**
+   * Has authorization token expired.
+   * @param client &#x60;AuthotizationToken&#x60; query Prisma client.
+   * @param type Validate type.
+   */
+  hasTokenExpired(
+    token: AuthorizationToken,
+    type: HasTokenExpiredType,
+  ): boolean {
+    if (!token) return true;
+    const expiredAt &#x3D;
+      type &#x3D;&#x3D;&#x3D; HasTokenExpiredType.AUTH
+        ? token.expiredAt
+        : token.refreshExpiredAt;
+
+    return !expiredAt || expiredAt.getTime() &lt;&#x3D; Date.now();
+  }
+
+  /**
+   * Create authorization token object for user.
+   * @param user Create authoprization token object user.
+   */
+  async createUserAuthorizationToken(
+    user: User | string,
+  ): Promise&lt;AuthorizationToken&gt; {
+    const setting &#x3D; await this.getTokenExpiredIn();
+    const [token] &#x3D; await this.prisma.$transaction([
+      this.prisma.authorizationToken.create({
+        data: {
+          userId: typeof user &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? user : user.id,
+          token: IDHelper.id(128),
+          expiredAt: dayjs()
+            .add(setting.expiredIn.value, setting.expiredIn.unit)
+            .toDate(),
+          refreshExpiredAt: dayjs()
+            .add(setting.refreshExpiredIn.value, setting.refreshExpiredIn.unit)
+            .toDate(),
+        },
+      }),
+      this.prisma.authorizationToken.deleteMany({
+        where: {
+          refreshExpiredAt: {
+            lte: dayjs().add(10, &#x27;minutes&#x27;).toDate(),
+          },
+        },
+      }),
+    ]);
+
+    return token;
+  }
+
+  async createTokenWithSecurity(
+    user: User,
+    type: UserSecurityCompareType,
+    security: string,
+  ) {
+    const compared &#x3D; await this.userService.compareSecurity(
+      user,
+      type,
+      security,
+    );
+    if (compared) {
+      if (compared instanceof Function) {
+        compared();
+      }
+      return this.createUserAuthorizationToken(user);
+    }
+
+    throw new Error(SECURITY_COMPARE_FAILED);
+  }
+
+  /**
+   * Refresh authorization token object to database.
+   * @param authorizationToken Await refresh authorization token object.
+   */
+  async refreshAuthorizationToken(
+    authorizationToken: AuthorizationToken,
+  ): Promise&lt;AuthorizationToken&gt; {
+    const setting &#x3D; await this.getTokenExpiredIn();
+    // If authorization token not found, throw &#x60;not found&#x60; error.
+    if (!authorizationToken) {
+      throw new Error(AUTHORIZATION_TOKEN_NOT_FOUND);
+
+      // If token is expired, update to new token.
+    } else if (authorizationToken.expiredAt.getTime() &lt;&#x3D; Date.now()) {
+      return await this.prisma.authorizationToken.update({
+        where: { token: authorizationToken.token },
+        data: {
+          token: IDHelper.id(128),
+          expiredAt: dayjs()
+            .add(setting.expiredIn.value, setting.expiredIn.unit)
+            .toDate(),
+          refreshExpiredAt: dayjs()
+            .add(setting.refreshExpiredIn.value, setting.refreshExpiredIn.unit)
+            .toDate(),
+        },
+      });
+    }
+
+    // If the token validity period is greater than 5 minutes,
+    // set it to expire in three minutes, and then create a new token
+    const fiveMinutesDate &#x3D; dayjs().add(5, &#x27;minutes&#x27;).toDate();
+    if (authorizationToken.expiredAt.getTime() &gt; fiveMinutesDate.getTime()) {
+      await this.prisma.authorizationToken.update({
+        where: { token: authorizationToken.token },
+        data: {
+          expiredAt: fiveMinutesDate,
+          refreshExpiredAt: new Date(),
+        },
+      });
+    }
+
+    return this.createUserAuthorizationToken(authorizationToken.userId);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AuthorizationTokenService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

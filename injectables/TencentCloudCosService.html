@@ -1,0 +1,509 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Socfony Server</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/material.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">Socfony Server</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>TencentCloudCosService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/tencent-cloud/cos/soc.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createTemporaryReadCredential">createTemporaryReadCredential</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createTemporaryWriteCredential">createTemporaryWriteCredential</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#options">options</a>
+                                </li>
+                                <li>
+                                    <a href="#temporaryCredentialDurationSeconds">temporaryCredentialDurationSeconds</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(sts: <a href="../injectables/TencentCloudStsService.html">TencentCloudStsService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:6</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>sts</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TencentCloudStsService.html" target="_self" >TencentCloudStsService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTemporaryReadCredential"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createTemporaryReadCredential
+                        </b>
+                        <a href="#createTemporaryReadCredential"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTemporaryReadCredential()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:26</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create Tencent Cloud COS temporary read credential.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createTemporaryWriteCredential"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createTemporaryWriteCredential
+                        </b>
+                        <a href="#createTemporaryWriteCredential"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTemporaryWriteCredential(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Create Tencent Cloud COS temporary write credential.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Tencent Cloud COS object key.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <span class="name"><b>options</b><a href="#options"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>options()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:9</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="temporaryCredentialDurationSeconds"></a>
+                        <span class="name"><b>temporaryCredentialDurationSeconds</b><a href="#temporaryCredentialDurationSeconds"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>temporaryCredentialDurationSeconds()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/tencent-cloud/cos/soc.service.ts:19</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>get temporary credential duration seconds.</p>
+</div>
+
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { IDHelper } from &#x27;src/helper&#x27;;
+import { TencentCloudStsService } from &#x27;../sts&#x27;;
+
+@Injectable()
+export class TencentCloudCosService {
+  constructor(private readonly sts: TencentCloudStsService) {}
+
+  get options() {
+    return {
+      bucket: process.env.TENCENT_CLOUD_COS_BUCKET,
+      region: process.env.TENCENT_CLOUD_COS_REGION,
+    };
+  }
+
+  /**
+   * get temporary credential duration seconds.
+   */
+  get temporaryCredentialDurationSeconds() {
+    return 7200;
+  }
+
+  /**
+   * Create Tencent Cloud COS temporary read credential.
+   */
+  async createTemporaryReadCredential() {
+    const { bucket, region } &#x3D; this.options;
+    const stsClient &#x3D; this.sts.createClient(region);
+    const [_, uid] &#x3D; bucket.split(&#x27;-&#x27;);
+    return await stsClient.GetFederationToken({
+      Name: IDHelper.alphabet(32),
+      DurationSeconds: this.temporaryCredentialDurationSeconds,
+      Policy: JSON.stringify({
+        version: &#x27;2.0&#x27;,
+        statement: [
+          {
+            effect: &#x27;allow&#x27;,
+            action: [
+              &#x27;name/cos:GetObject&#x27;,
+              &#x27;name/cos:HeadObject&#x27;,
+              &#x27;name/cos:OptionsObject&#x27;,
+            ],
+            resource: [&#x60;qcs::cos:${region}:uid/${uid}:${bucket}/*&#x60;],
+          },
+        ],
+      }),
+    });
+  }
+
+  /**
+   * Create Tencent Cloud COS temporary write credential.
+   * @param name Tencent Cloud COS object key.
+   */
+  async createTemporaryWriteCredential(name: string) {
+    const { bucket, region } &#x3D; this.options;
+    const stsClient &#x3D; this.sts.createClient(region);
+    const [_, uid] &#x3D; bucket.split(&#x27;-&#x27;);
+    return await stsClient.GetFederationToken({
+      Name: IDHelper.alphabet(32),
+      DurationSeconds: this.temporaryCredentialDurationSeconds,
+      Policy: JSON.stringify({
+        version: &#x27;2.0&#x27;,
+        statement: [
+          {
+            effect: &#x27;allow&#x27;,
+            action: [
+              //简单上传操作
+              &#x27;name/cos:PutObject&#x27;,
+              //表单上传对象
+              &#x27;name/cos:PostObject&#x27;,
+              //分块上传：初始化分块操作
+              &#x27;name/cos:InitiateMultipartUpload&#x27;,
+              //分块上传：List 进行中的分块上传
+              &#x27;name/cos:ListMultipartUploads&#x27;,
+              //分块上传：List 已上传分块操作
+              &#x27;name/cos:ListParts&#x27;,
+              //分块上传：上传分块块操作
+              &#x27;name/cos:UploadPart&#x27;,
+              //分块上传：完成所有分块上传操作
+              &#x27;name/cos:CompleteMultipartUpload&#x27;,
+              //取消分块上传操作
+              &#x27;name/cos:AbortMultipartUpload&#x27;,
+            ],
+            resource: [&#x60;qcs::cos:${region}:uid/${uid}:${bucket}/${name}&#x60;],
+          },
+        ],
+      }),
+    });
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TencentCloudCosService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
