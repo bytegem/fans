@@ -60,6 +60,13 @@
             <code>src/authorization-token/authorization-token.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Authorization token service.</p>
+
+            </p>
 
 
 
@@ -118,12 +125,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/authorization-token/authorization-token.service.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/authorization-token/authorization-token.service.ts:25</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create Authotization token service.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -132,6 +141,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -146,6 +156,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Prisma client.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>userService</td>
@@ -158,6 +172,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>User service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -197,14 +215,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:121</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Create token with security.</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -214,6 +234,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -228,6 +249,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Creathe token with user.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>type</td>
@@ -240,6 +265,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>creat compare security type.</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>security</td>
@@ -252,6 +281,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>security object.</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -293,8 +326,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="78"
-                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:78</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:86</a></div>
                 </td>
             </tr>
 
@@ -372,8 +405,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:39</a></div>
                 </td>
             </tr>
 
@@ -413,8 +446,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="61"
-                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:61</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:69</a></div>
                 </td>
             </tr>
 
@@ -506,8 +539,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="131"
-                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:131</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">src/authorization-token/authorization-token.service.ts:145</a></div>
                 </td>
             </tr>
 
@@ -587,8 +620,16 @@ import {
 import { HasTokenExpiredType } from &#x27;./enums&#x27;;
 import { AuthorizationTokenValidityPeriod } from &#x27;./types&#x27;;
 
+/**
+ * Authorization token service.
+ */
 @Injectable()
 export class AuthorizationTokenService {
+  /**
+   * Create Authotization token service.
+   * @param prisma Prisma client.
+   * @param userService User service.
+   */
   constructor(
     private readonly prisma: PrismaClient,
     private readonly userService: UserService,
@@ -673,6 +714,12 @@ export class AuthorizationTokenService {
     return token;
   }
 
+  /**
+   * Create token with security.
+   * @param user Creathe token with user.
+   * @param type creat compare security type.
+   * @param security security object.
+   */
   async createTokenWithSecurity(
     user: User,
     type: UserSecurityCompareType,

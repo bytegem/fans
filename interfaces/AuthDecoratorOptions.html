@@ -137,6 +137,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Has authorization token</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -171,6 +177,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Has authorization token type.</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
@@ -190,7 +202,14 @@ import { AuthorizationGuard } from &#x27;./authorization.guard&#x27;;
  * Auth Decorator Options.
  */
 export interface AuthDecoratorOptions {
+  /**
+   * Has authorization token
+   */
   hasAuthorization?: boolean;
+
+  /**
+   * Has authorization token type.
+   */
   type?: HasTokenExpiredType;
 }
 

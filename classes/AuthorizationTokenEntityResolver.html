@@ -64,6 +64,13 @@
             <code>src/authorization-token/authorization-token.resolver.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>AuthorizationTokenEntity resolver.</p>
+
+            </p>
 
 
 
@@ -117,12 +124,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:29</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Create Authorization resolver.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -131,6 +140,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -145,6 +155,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Authorization token service.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>prisma</td>
@@ -157,6 +171,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <code><p>Prisma client.</p>
+</code>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -202,8 +220,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="64"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:64</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:72</a></div>
                 </td>
             </tr>
 
@@ -288,8 +306,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="75"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:75</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:83</a></div>
                 </td>
             </tr>
 
@@ -372,8 +390,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="119"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:119</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="127"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:127</a></div>
                 </td>
             </tr>
 
@@ -451,8 +469,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="37"
-                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:37</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/authorization-token/authorization-token.resolver.ts:45</a></div>
                 </td>
             </tr>
 
@@ -540,8 +558,16 @@ import { CreateAuthorizationTokenArgs } from &#x27;./dto/create-authorization-to
 import { AuthorizationTokenEntity } from &#x27;./entities/authorization-token.entity&#x27;;
 import { HasTokenExpiredType } from &#x27;./enums&#x27;;
 
+/**
+ * AuthorizationTokenEntity resolver.
+ */
 @Resolver(() &#x3D;&gt; AuthorizationTokenEntity)
 export class AuthorizationTokenEntityResolver {
+  /**
+   * Create Authorization resolver.
+   * @param authorizationTokenService Authorization token service.
+   * @param prisma Prisma client.
+   */
   constructor(
     private readonly authorizationTokenService: AuthorizationTokenService,
     private readonly prisma: PrismaClient,
