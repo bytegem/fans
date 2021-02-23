@@ -24,59 +24,59 @@
 <title>cluster_UserProfileModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="86,-70 86,-268 410,-268 410,-70 86,-70"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_UserProfileModule_exports</title>
-<polygon fill="none" stroke="black" points="188,-208 188,-260 330,-260 330,-208 188,-208"/>
+<g id="clust6" class="cluster">
+<title>cluster_UserProfileModule_providers</title>
+<polygon fill="none" stroke="black" points="216,-78 216,-130 402,-130 402,-78 216,-78"/>
 </g>
 <g id="clust3" class="cluster">
 <title>cluster_UserProfileModule_imports</title>
-<polygon fill="none" stroke="black" points="288,-78 288,-130 402,-130 402,-78 288,-78"/>
+<polygon fill="none" stroke="black" points="94,-78 94,-130 208,-130 208,-78 94,-78"/>
 </g>
-<g id="clust6" class="cluster">
-<title>cluster_UserProfileModule_providers</title>
-<polygon fill="none" stroke="black" points="94,-78 94,-130 280,-130 280,-78 94,-78"/>
+<g id="clust4" class="cluster">
+<title>cluster_UserProfileModule_exports</title>
+<polygon fill="none" stroke="black" points="166,-208 166,-260 308,-260 308,-208 166,-208"/>
 </g>
 <!-- PrismaModule -->
 <g id="node1" class="node">
 <title>PrismaModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="394.43,-122 391.43,-126 370.43,-126 367.43,-122 295.57,-122 295.57,-86 394.43,-86 394.43,-122"/>
-<text text-anchor="middle" x="345" y="-99.8" font-family="Times,serif" font-size="14.00">PrismaModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="200.43,-122 197.43,-126 176.43,-126 173.43,-122 101.57,-122 101.57,-86 200.43,-86 200.43,-122"/>
+<text text-anchor="middle" x="151" y="-99.8" font-family="Times,serif" font-size="14.00">PrismaModule</text>
 </g>
 <!-- UserProfileModule -->
 <g id="node2" class="node">
 <title>UserProfileModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="321.08,-187 318.08,-191 297.08,-191 294.08,-187 196.92,-187 196.92,-151 321.08,-151 321.08,-187"/>
-<text text-anchor="middle" x="259" y="-164.8" font-family="Times,serif" font-size="14.00">UserProfileModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="299.08,-187 296.08,-191 275.08,-191 272.08,-187 174.92,-187 174.92,-151 299.08,-151 299.08,-187"/>
+<text text-anchor="middle" x="237" y="-164.8" font-family="Times,serif" font-size="14.00">UserProfileModule</text>
 </g>
 <!-- PrismaModule&#45;&gt;UserProfileModule -->
 <g id="edge1" class="edge">
 <title>PrismaModule&#45;&gt;UserProfileModule</title>
-<path fill="none" stroke="black" d="M308.41,-122.11C308.41,-122.11 308.41,-140.99 308.41,-140.99"/>
-<polygon fill="black" stroke="black" points="304.91,-140.99 308.41,-150.99 311.91,-140.99 304.91,-140.99"/>
+<path fill="none" stroke="black" d="M187.59,-122.11C187.59,-122.11 187.59,-140.99 187.59,-140.99"/>
+<polygon fill="black" stroke="black" points="184.09,-140.99 187.59,-150.99 191.09,-140.99 184.09,-140.99"/>
 </g>
 <!-- UserProfileService  -->
 <g id="node3" class="node">
 <title>UserProfileService </title>
-<polygon fill="#fb8072" stroke="black" points="322,-252 196,-252 196,-216 322,-216 322,-252"/>
-<text text-anchor="middle" x="259" y="-229.8" font-family="Times,serif" font-size="14.00">UserProfileService </text>
+<polygon fill="#fb8072" stroke="black" points="300,-252 174,-252 174,-216 300,-216 300,-252"/>
+<text text-anchor="middle" x="237" y="-229.8" font-family="Times,serif" font-size="14.00">UserProfileService </text>
 </g>
 <!-- UserProfileModule&#45;&gt;UserProfileService  -->
 <g id="edge2" class="edge">
 <title>UserProfileModule&#45;&gt;UserProfileService </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M259,-187.11C259,-187.11 259,-205.99 259,-205.99"/>
-<polygon fill="black" stroke="black" points="255.5,-205.99 259,-215.99 262.5,-205.99 255.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M237,-187.11C237,-187.11 237,-205.99 237,-205.99"/>
+<polygon fill="black" stroke="black" points="233.5,-205.99 237,-215.99 240.5,-205.99 233.5,-205.99"/>
 </g>
 <!-- UserProfileService -->
 <g id="node4" class="node">
 <title>UserProfileService</title>
-<ellipse fill="#fdb462" stroke="black" cx="187" cy="-104" rx="84.5" ry="18"/>
-<text text-anchor="middle" x="187" y="-99.8" font-family="Times,serif" font-size="14.00">UserProfileService</text>
+<ellipse fill="#fdb462" stroke="black" cx="309" cy="-104" rx="84.5" ry="18"/>
+<text text-anchor="middle" x="309" y="-99.8" font-family="Times,serif" font-size="14.00">UserProfileService</text>
 </g>
 <!-- UserProfileService&#45;&gt;UserProfileModule -->
 <g id="edge3" class="edge">
 <title>UserProfileService&#45;&gt;UserProfileModule</title>
-<path fill="none" stroke="black" d="M234.23,-119.08C234.23,-119.08 234.23,-140.76 234.23,-140.76"/>
-<polygon fill="black" stroke="black" points="230.73,-140.76 234.23,-150.76 237.73,-140.76 230.73,-140.76"/>
+<path fill="none" stroke="black" d="M261.77,-119.08C261.77,-119.08 261.77,-140.76 261.77,-140.76"/>
+<polygon fill="black" stroke="black" points="258.27,-140.76 261.77,-150.76 265.27,-140.76 258.27,-140.76"/>
 </g>
 </g>
 </svg>

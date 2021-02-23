@@ -78,6 +78,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 </li>
                             </li>
                             <li class="link">
+                                <a href="modules/MomentModule.html" data-type="entity-link">MomentModule</a>
+                            </li>
+                            <li class="link">
                                 <a href="modules/PrismaModule.html" data-type="entity-link">PrismaModule</a>
                             </li>
                             <li class="link">
@@ -181,6 +184,21 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="classes/ExecutionContext.html" data-type="entity-link">ExecutionContext</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MomentAudioMedia.html" data-type="entity-link">MomentAudioMedia</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MomentEntity.html" data-type="entity-link">MomentEntity</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MomentImageMedia.html" data-type="entity-link">MomentImageMedia</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MomentMediaCommon.html" data-type="entity-link">MomentMediaCommon</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/MomentVideoMedia.html" data-type="entity-link">MomentVideoMedia</a>
                             </li>
                             <li class="link">
                                 <a href="classes/SecuritySmsResolver.html" data-type="entity-link">SecuritySmsResolver</a>

@@ -110,6 +110,12 @@
                             <a href="#id" title="src/helper/id.helper.ts"><b>id</b>&nbsp;&nbsp;&nbsp;(src/.../id.helper.ts)</a>
                         </li>
                         <li>
+                            <a href="#MEDIA_TYPE_DONT_SUPPORTED" title="src/constants.ts"><b>MEDIA_TYPE_DONT_SUPPORTED</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MomentMedia" title="src/moment/entities/media.entity.ts"><b>MomentMedia</b>&nbsp;&nbsp;&nbsp;(src/.../media.entity.ts)</a>
+                        </li>
+                        <li>
                             <a href="#numeral" title="src/helper/id.helper.ts"><b>numeral</b>&nbsp;&nbsp;&nbsp;(src/.../id.helper.ts)</a>
                         </li>
                         <li>
@@ -597,6 +603,39 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="MEDIA_TYPE_DONT_SUPPORTED"></a>
+                        <span class="name">
+                            <b>
+                            MEDIA_TYPE_DONT_SUPPORTED</b>
+                            <a href="#MEDIA_TYPE_DONT_SUPPORTED"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;MEDIA_TYPE_DONT_SUPPORTED&#x27;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Don&#39;t supported media type.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="SECURITY_COMPARE_FAILED"></a>
                         <span class="name">
                             <b>
@@ -1035,6 +1074,52 @@
                 <tr>
                     <td class="col-md-4">
                         <div class="io-description"><p>Get Socfony execution context decorator.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/moment/entities/media.entity.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MomentMedia"></a>
+                        <span class="name">
+                            <b>
+                            MomentMedia</b>
+                            <a href="#MomentMedia"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createUnionType({
+  name: &#x27;MomentMedia&#x27;,
+  types: () &#x3D;&gt; [MomentAudioMedia, MomentImageMedia, MomentVideoMedia],
+  description: &#x27;Moment media.&#x27;,
+  resolveType(value: MomentMediaCommon) {
+    switch (value?.type) {
+      case MomentMediaType.AUDIO:
+        return MomentAudioMedia;
+      case MomentMediaType.IMAGE:
+        return MomentImageMedia;
+      case MomentMediaType.VIDEO:
+        return MomentVideoMedia;
+      default:
+        throw new Error(MEDIA_TYPE_DONT_SUPPORTED);
+    }
+  },
+})</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Moment media union type.</p>
 </div>
                     </td>
                 </tr>
