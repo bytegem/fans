@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li>ViewerEntity</li>
+  <li>DateTimeFilter</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,29 +61,23 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/user/entities/viewer.entity.ts</code>
+            <code>src/graphql/filters/date-time.filter.ts</code>
         </p>
 
             <p class="comment">
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Viewer entity.</p>
+                <p>Date time filter</p>
 
             </p>
 
-            <p class="comment">
-                <h3>Extends</h3>
-            </p>
-            <p class="comment">
-                        <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-            </p>
 
             <p class="comment">
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                        <code>Omit</code>
+                        <code></code>
             </p>
 
 
@@ -100,22 +94,36 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#email">email</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#equals">equals</a>
                             </li>
                             <li>
-                                <a href="#phone">phone</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#gt">gt</a>
                             </li>
                             <li>
-                                <a href="#createdAt">createdAt</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#gte">gte</a>
                             </li>
                             <li>
-                                <a href="#id">id</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#in">in</a>
                             </li>
                             <li>
-                                <a href="#login">login</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#lt">lt</a>
                             </li>
                             <li>
-                                <a href="#profile">profile</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#lte">lte</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#not">not</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#notIn">notIn</a>
                             </li>
                         </ul>
                     </td>
@@ -140,95 +148,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="email"></a>
+                        <a name="equals"></a>
                         <span class="name">
                             <b>
-                            email</b>
-                            <a href="#email"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @Field(undefined, {nullable: true, description: &#x27;User bound E-Mail address.&#x27;})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/user/entities/viewer.entity.ts:22</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User bound E-Mail address.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="phone"></a>
-                        <span class="name">
-                            <b>
-                            phone</b>
-                            <a href="#phone"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @Field(undefined, {nullable: true, description: &#x27;User bound Phone full number.&#x27;})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/user/entities/viewer.entity.ts:31</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User bound Phone full number.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="createdAt"></a>
-                        <span class="name">
-                            <b>
-                            createdAt</b>
-                            <a href="#createdAt"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            equals</b>
+                            <a href="#equals"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -243,29 +168,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;User registered date at.&#x27;})<br />
+                                @Field(undefined, {description: &#x27;Date equals&#x27;, nullable: true})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:45</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/graphql/filters/date-time.filter.ts:15</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User registered date at.</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -273,17 +185,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="id"></a>
+                        <a name="gt"></a>
                         <span class="name">
                             <b>
-                            id</b>
-                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            gt</b>
+                            <a href="#gt"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
 
                         </td>
                     </tr>
@@ -292,29 +205,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;User ID&#x27;})<br />
+                                @Field(undefined, {description: &#x27;Date gt&#x27;, nullable: true})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:28</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/graphql/filters/date-time.filter.ts:33</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User ID</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -322,17 +222,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="login"></a>
+                        <a name="gte"></a>
                         <span class="name">
                             <b>
-                            login</b>
-                            <a href="#login"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            gte</b>
+                            <a href="#gte"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
 
                         </td>
                     </tr>
@@ -341,29 +242,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {nullable: true, description: &#x27;User login name&#x27;})<br />
+                                @Field(undefined, {description: &#x27;Date gte&#x27;, nullable: true})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:37</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/graphql/filters/date-time.filter.ts:36</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User login name</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -371,17 +259,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="profile"></a>
+                        <a name="in"></a>
                         <span class="name">
                             <b>
-                            profile</b>
-                            <a href="#profile"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            in</b>
+                            <a href="#in"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>UserProfile</code>
+                            <i>Type : </i>    <code>Date[]</code>
 
                         </td>
                     </tr>
@@ -390,29 +279,164 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;The user profile&#x27;})<br />
+                                @Field(undefined, {description: &#x27;Date in&#x27;, nullable: true})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:53</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/graphql/filters/date-time.filter.ts:18</a></div>
                             </td>
                         </tr>
 
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>User profile.</p>
-</div>
+                        <a name="lt"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            lt</b>
+                            <a href="#lt"><span class="icon ion-ios-link"></span></a>
+                        </span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {description: &#x27;Date lt&#x27;, nullable: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/graphql/filters/date-time.filter.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lte"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            lte</b>
+                            <a href="#lte"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {description: &#x27;Date lte&#x27;, nullable: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/graphql/filters/date-time.filter.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="not"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            not</b>
+                            <a href="#not"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/DateTimeFilter.html" target="_self" >DateTimeFilter</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {description: &#x27;Date not&#x27;, nullable: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/graphql/filters/date-time.filter.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="notIn"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            notIn</b>
+                            <a href="#notIn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Date[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {description: &#x27;Date not in&#x27;, nullable: true})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/graphql/filters/date-time.filter.ts:24</a></div>
+                            </td>
+                        </tr>
+
 
             </tbody>
         </table>
@@ -428,37 +452,45 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, ObjectType } from &#x27;@nestjs/graphql&#x27;;
-import { User } from &#x27;@prisma/client&#x27;;
-import { UserInterface } from &#x27;./user.interface&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, GraphQLISODateTime, InputType } from &#x27;@nestjs/graphql&#x27;;
+import { Prisma } from &#x27;@prisma/client&#x27;;
 
 /**
- * Viewer entity.
+ * Date time filter
  */
-@ObjectType({
-  implements: [UserInterface],
-  description: &#x27;Viewer entity.&#x27;,
+@InputType({
+  description: &#x27;Date time filter&#x27;,
 })
-export class ViewerEntity
-  extends UserInterface
-  implements Omit&lt;User, &#x27;password&#x27;&gt; {
-  /**
-   * User bound E-Mail address.
-   */
-  @Field((type) &#x3D;&gt; String, {
+export class DateTimeFilter implements Prisma.DateTimeFilter {
+  @Field(() &#x3D;&gt; GraphQLISODateTime, {
+    description: &#x27;Date equals&#x27;,
     nullable: true,
-    description: &#x27;User bound E-Mail address.&#x27;,
   })
-  email: string;
+  equals?: Date;
 
-  /**
-   * User bound Phone full number.
-   */
-  @Field((type) &#x3D;&gt; String, {
+  @Field(() &#x3D;&gt; [GraphQLISODateTime], { description: &#x27;Date in&#x27;, nullable: true })
+  in?: Date[];
+
+  @Field(() &#x3D;&gt; [GraphQLISODateTime], {
+    description: &#x27;Date not in&#x27;,
     nullable: true,
-    description: &#x27;User bound Phone full number.&#x27;,
   })
-  phone: string;
+  notIn?: Date[];
+
+  @Field(() &#x3D;&gt; GraphQLISODateTime, { description: &#x27;Date lt&#x27;, nullable: true })
+  lt?: Date;
+
+  @Field(() &#x3D;&gt; GraphQLISODateTime, { description: &#x27;Date lte&#x27;, nullable: true })
+  lte?: Date;
+
+  @Field(() &#x3D;&gt; GraphQLISODateTime, { description: &#x27;Date gt&#x27;, nullable: true })
+  gt?: Date;
+
+  @Field(() &#x3D;&gt; GraphQLISODateTime, { description: &#x27;Date gte&#x27;, nullable: true })
+  gte?: Date;
+
+  @Field(() &#x3D;&gt; DateTimeFilter, { description: &#x27;Date not&#x27;, nullable: true })
+  not?: DateTimeFilter;
 }
 </code></pre>
     </div>
@@ -488,7 +520,7 @@ export class ViewerEntity
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'ViewerEntity.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DateTimeFilter.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

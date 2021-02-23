@@ -24,71 +24,71 @@
 <title>cluster_AuthorizationTokenModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 502,-268 502,-70 8,-70"/>
 </g>
+<g id="clust3" class="cluster">
+<title>cluster_AuthorizationTokenModule_imports</title>
+<polygon fill="none" stroke="black" points="276,-78 276,-130 494,-130 494,-78 276,-78"/>
+</g>
 <g id="clust6" class="cluster">
 <title>cluster_AuthorizationTokenModule_providers</title>
-<polygon fill="none" stroke="black" points="242,-78 242,-130 494,-130 494,-78 242,-78"/>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 268,-130 268,-78 16,-78"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_AuthorizationTokenModule_exports</title>
-<polygon fill="none" stroke="black" points="81,-208 81,-260 273,-260 273,-208 81,-208"/>
-</g>
-<g id="clust3" class="cluster">
-<title>cluster_AuthorizationTokenModule_imports</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 234,-130 234,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="231,-208 231,-260 423,-260 423,-208 231,-208"/>
 </g>
 <!-- PrismaModule -->
 <g id="node1" class="node">
 <title>PrismaModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="226.43,-122 223.43,-126 202.43,-126 199.43,-122 127.57,-122 127.57,-86 226.43,-86 226.43,-122"/>
-<text text-anchor="middle" x="177" y="-99.8" font-family="Times,serif" font-size="14.00">PrismaModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="486.43,-122 483.43,-126 462.43,-126 459.43,-122 387.57,-122 387.57,-86 486.43,-86 486.43,-122"/>
+<text text-anchor="middle" x="437" y="-99.8" font-family="Times,serif" font-size="14.00">PrismaModule</text>
 </g>
 <!-- AuthorizationTokenModule -->
 <g id="node3" class="node">
 <title>AuthorizationTokenModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="263.58,-187 260.58,-191 239.58,-191 236.58,-187 90.42,-187 90.42,-151 263.58,-151 263.58,-187"/>
-<text text-anchor="middle" x="177" y="-164.8" font-family="Times,serif" font-size="14.00">AuthorizationTokenModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="413.58,-187 410.58,-191 389.58,-191 386.58,-187 240.42,-187 240.42,-151 413.58,-151 413.58,-187"/>
+<text text-anchor="middle" x="327" y="-164.8" font-family="Times,serif" font-size="14.00">AuthorizationTokenModule</text>
 </g>
 <!-- PrismaModule&#45;&gt;AuthorizationTokenModule -->
 <g id="edge1" class="edge">
 <title>PrismaModule&#45;&gt;AuthorizationTokenModule</title>
-<path fill="none" stroke="black" d="M177,-122.11C177,-122.11 177,-140.99 177,-140.99"/>
-<polygon fill="black" stroke="black" points="173.5,-140.99 177,-150.99 180.5,-140.99 173.5,-140.99"/>
+<path fill="none" stroke="black" d="M400.66,-122.11C400.66,-122.11 400.66,-140.99 400.66,-140.99"/>
+<polygon fill="black" stroke="black" points="397.16,-140.99 400.66,-150.99 404.16,-140.99 397.16,-140.99"/>
 </g>
 <!-- UserModule -->
 <g id="node2" class="node">
 <title>UserModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="109.98,-122 106.98,-126 85.98,-126 82.98,-122 24.02,-122 24.02,-86 109.98,-86 109.98,-122"/>
-<text text-anchor="middle" x="67" y="-99.8" font-family="Times,serif" font-size="14.00">UserModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="369.98,-122 366.98,-126 345.98,-126 342.98,-122 284.02,-122 284.02,-86 369.98,-86 369.98,-122"/>
+<text text-anchor="middle" x="327" y="-99.8" font-family="Times,serif" font-size="14.00">UserModule</text>
 </g>
 <!-- UserModule&#45;&gt;AuthorizationTokenModule -->
 <g id="edge2" class="edge">
 <title>UserModule&#45;&gt;AuthorizationTokenModule</title>
-<path fill="none" stroke="black" d="M100.23,-122.11C100.23,-122.11 100.23,-140.99 100.23,-140.99"/>
-<polygon fill="black" stroke="black" points="96.73,-140.99 100.23,-150.99 103.73,-140.99 96.73,-140.99"/>
+<path fill="none" stroke="black" d="M327,-122.11C327,-122.11 327,-140.99 327,-140.99"/>
+<polygon fill="black" stroke="black" points="323.5,-140.99 327,-150.99 330.5,-140.99 323.5,-140.99"/>
 </g>
 <!-- AuthorizationTokenService  -->
 <g id="node4" class="node">
 <title>AuthorizationTokenService </title>
-<polygon fill="#fb8072" stroke="black" points="264.5,-252 89.5,-252 89.5,-216 264.5,-216 264.5,-252"/>
-<text text-anchor="middle" x="177" y="-229.8" font-family="Times,serif" font-size="14.00">AuthorizationTokenService </text>
+<polygon fill="#fb8072" stroke="black" points="414.5,-252 239.5,-252 239.5,-216 414.5,-216 414.5,-252"/>
+<text text-anchor="middle" x="327" y="-229.8" font-family="Times,serif" font-size="14.00">AuthorizationTokenService </text>
 </g>
 <!-- AuthorizationTokenModule&#45;&gt;AuthorizationTokenService  -->
 <g id="edge3" class="edge">
 <title>AuthorizationTokenModule&#45;&gt;AuthorizationTokenService </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M177,-187.11C177,-187.11 177,-205.99 177,-205.99"/>
-<polygon fill="black" stroke="black" points="173.5,-205.99 177,-215.99 180.5,-205.99 173.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M327,-187.11C327,-187.11 327,-205.99 327,-205.99"/>
+<polygon fill="black" stroke="black" points="323.5,-205.99 327,-215.99 330.5,-205.99 323.5,-205.99"/>
 </g>
 <!-- AuthorizationTokenService -->
 <g id="node5" class="node">
 <title>AuthorizationTokenService</title>
-<ellipse fill="#fdb462" stroke="black" cx="368" cy="-104" rx="118.1" ry="18"/>
-<text text-anchor="middle" x="368" y="-99.8" font-family="Times,serif" font-size="14.00">AuthorizationTokenService</text>
+<ellipse fill="#fdb462" stroke="black" cx="142" cy="-104" rx="118.1" ry="18"/>
+<text text-anchor="middle" x="142" y="-99.8" font-family="Times,serif" font-size="14.00">AuthorizationTokenService</text>
 </g>
 <!-- AuthorizationTokenService&#45;&gt;AuthorizationTokenModule -->
 <g id="edge4" class="edge">
 <title>AuthorizationTokenService&#45;&gt;AuthorizationTokenModule</title>
-<path fill="none" stroke="black" d="M256.62,-110.47C256.62,-110.47 256.62,-140.78 256.62,-140.78"/>
-<polygon fill="black" stroke="black" points="253.12,-140.78 256.62,-150.78 260.12,-140.78 253.12,-140.78"/>
+<path fill="none" stroke="black" d="M250.38,-111.46C250.38,-111.46 250.38,-140.84 250.38,-140.84"/>
+<polygon fill="black" stroke="black" points="246.88,-140.84 250.38,-150.84 253.88,-140.84 246.88,-140.84"/>
 </g>
 </g>
 </svg>

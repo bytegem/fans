@@ -107,10 +107,16 @@
                             <a href="#custom" title="src/helper/id.helper.ts"><b>custom</b>&nbsp;&nbsp;&nbsp;(src/.../id.helper.ts)</a>
                         </li>
                         <li>
+                            <a href="#GraphQLModule" title="src/graphql/graphql.module.ts"><b>GraphQLModule</b>&nbsp;&nbsp;&nbsp;(src/.../graphql.module.ts)</a>
+                        </li>
+                        <li>
                             <a href="#id" title="src/helper/id.helper.ts"><b>id</b>&nbsp;&nbsp;&nbsp;(src/.../id.helper.ts)</a>
                         </li>
                         <li>
                             <a href="#MEDIA_TYPE_DONT_SUPPORTED" title="src/constants.ts"><b>MEDIA_TYPE_DONT_SUPPORTED</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MOMENT_NOT_FOUND" title="src/constants.ts"><b>MOMENT_NOT_FOUND</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
                         </li>
                         <li>
                             <a href="#MomentMedia" title="src/moment/entities/media.entity.ts"><b>MomentMedia</b>&nbsp;&nbsp;&nbsp;(src/.../media.entity.ts)</a>
@@ -636,6 +642,39 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="MOMENT_NOT_FOUND"></a>
+                        <span class="name">
+                            <b>
+                            MOMENT_NOT_FOUND</b>
+                            <a href="#MOMENT_NOT_FOUND"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;MOMENT_NOT_FOUND&#x27;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Moment not found.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="SECURITY_COMPARE_FAILED"></a>
                         <span class="name">
                             <b>
@@ -1077,6 +1116,46 @@
 </div>
                     </td>
                 </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/graphql/graphql.module.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="GraphQLModule"></a>
+                        <span class="name">
+                            <b>
+                            GraphQLModule</b>
+                            <a href="#GraphQLModule"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>_.forRootAsync({
+  imports: [PrismaModule],
+  inject: [PrismaClient],
+  useFactory(prisma: PrismaClient) {
+    const options &#x3D; getConfig();
+    return {
+      autoSchemaFile: options.isProduction ? true : &#x27;schema.graphql&#x27;,
+      sortSchema: true,
+      debug: !options.isProduction,
+      playground: !options.isProduction,
+      path: options.endpoint,
+      context({ req }) {
+        return ExecutionContext.create(prisma, req);
+      },
+    };
+  },
+})</code>
+                        </td>
+                    </tr>
+
 
             </tbody>
         </table>

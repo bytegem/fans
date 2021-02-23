@@ -145,9 +145,11 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Module } from &#x27;@nestjs/common&#x27;;
 import { PrismaModule } from &#x27;src/prisma&#x27;;
+import { MomentResolver } from &#x27;./moment.resolver&#x27;;
 
 @Module({
   imports: [PrismaModule],
+  providers: [MomentResolver],
 })
 export class MomentModule {}
 </code></pre>

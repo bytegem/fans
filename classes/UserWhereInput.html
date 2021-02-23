@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li>MomentEntity</li>
+  <li>UserWhereInput</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,23 +61,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/moment/entities/moment.entity.ts</code>
+            <code>src/user/dto/user-where.input.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Moment entity.</p>
-
-            </p>
 
 
             <p class="comment">
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                        <code></code>
+                        <code>Omit</code>
             </p>
 
 
@@ -94,28 +87,44 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#content">content</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#AND">AND</a>
                             </li>
                             <li>
+                                    <span class="modifier">Optional</span>
                                 <a href="#createdAt">createdAt</a>
                             </li>
                             <li>
-                                <a href="#deletedAt">deletedAt</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#email">email</a>
                             </li>
                             <li>
+                                    <span class="modifier">Optional</span>
                                 <a href="#id">id</a>
                             </li>
                             <li>
-                                <a href="#media">media</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#login">login</a>
                             </li>
                             <li>
-                                <a href="#owner">owner</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#moments">moments</a>
                             </li>
                             <li>
-                                <a href="#ownerId">ownerId</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#NOT">NOT</a>
                             </li>
                             <li>
-                                <a href="#title">title</a>
+                                    <span class="modifier">Optional</span>
+                                <a href="#OR">OR</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#phone">phone</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#profile">profile</a>
                             </li>
                         </ul>
                     </td>
@@ -140,17 +149,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="content"></a>
+                        <a name="AND"></a>
                         <span class="name">
                             <b>
-                            content</b>
-                            <a href="#content"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            AND</b>
+                            <a href="#AND"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="../classes/UserWhereInput.html" target="_self" >UserWhereInput[]</a></code>
 
                         </td>
                     </tr>
@@ -159,22 +169,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;Moment content&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;AND where&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/moment/entities/moment.entity.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/user/dto/user-where.input.ts:13</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment text content</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -185,6 +189,7 @@
                         <a name="createdAt"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Optional</span>
                             createdAt</b>
                             <a href="#createdAt"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -192,7 +197,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                            <i>Type : </i>        <code><a href="../classes/DateTimeFilter.html" target="_self" >DateTimeFilter</a></code>
 
                         </td>
                     </tr>
@@ -201,22 +206,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;Moment created at&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;created at date time filter&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/moment/entities/moment.entity.ts:47</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/user/dto/user-where.input.ts:43</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment created at</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -224,17 +223,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="deletedAt"></a>
+                        <a name="email"></a>
                         <span class="name">
                             <b>
-                            deletedAt</b>
-                            <a href="#deletedAt"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            email</b>
+                            <a href="#email"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                            <i>Type : </i>        <code><a href="../classes/StringFilter.html" target="_self" >StringFilter</a></code>
 
                         </td>
                     </tr>
@@ -243,22 +243,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;Moment deleted at&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;E-Mail filter&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/moment/entities/moment.entity.ts:53</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/user/dto/user-where.input.ts:31</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment deleted at</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -269,6 +263,7 @@
                         <a name="id"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Optional</span>
                             id</b>
                             <a href="#id"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -276,7 +271,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="../classes/StringFilter.html" target="_self" >StringFilter</a></code>
 
                         </td>
                     </tr>
@@ -285,22 +280,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;The moment ID&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;ID filter&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/moment/entities/moment.entity.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/user/dto/user-where.input.ts:22</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment ID</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -308,17 +297,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="media"></a>
+                        <a name="login"></a>
                         <span class="name">
                             <b>
-                            media</b>
-                            <a href="#media"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            login</b>
+                            <a href="#login"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Prisma.JsonValue</code>
+                            <i>Type : </i>        <code><a href="../classes/StringFilter.html" target="_self" >StringFilter</a></code>
 
                         </td>
                     </tr>
@@ -327,22 +317,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {nullable: true, description: &#x27;Moment media&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;login name filter&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/moment/entities/moment.entity.ts:41</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/user/dto/user-where.input.ts:28</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment media</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -350,17 +334,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="owner"></a>
+                        <a name="moments"></a>
                         <span class="name">
                             <b>
-                            owner</b>
-                            <a href="#owner"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            moments</b>
+                            <a href="#moments"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>User</code>
+                            <i>Type : </i>        <code><a href="../classes/MomentListRelationFilter.html" target="_self" >MomentListRelationFilter</a></code>
 
                         </td>
                     </tr>
@@ -369,22 +354,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;The moment owner&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;user moment list relation filter&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/moment/entities/moment.entity.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/user/dto/user-where.input.ts:55</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment owner</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -392,17 +371,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="ownerId"></a>
+                        <a name="NOT"></a>
                         <span class="name">
                             <b>
-                            ownerId</b>
-                            <a href="#ownerId"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            NOT</b>
+                            <a href="#NOT"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="../classes/UserWhereInput.html" target="_self" >UserWhereInput[]</a></code>
 
                         </td>
                     </tr>
@@ -411,22 +391,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;Moment owner ID&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;NOT where&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/moment/entities/moment.entity.ts:59</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/user/dto/user-where.input.ts:19</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Moment owner ID</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -434,17 +408,18 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="title"></a>
+                        <a name="OR"></a>
                         <span class="name">
                             <b>
-                            title</b>
-                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                                <span class="modifier">Optional</span>
+                            OR</b>
+                            <a href="#OR"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="../classes/UserWhereInput.html" target="_self" >UserWhereInput[]</a></code>
 
                         </td>
                     </tr>
@@ -453,22 +428,90 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;Moment title&#x27;, nullable: true})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;OR where&#x27;})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/moment/entities/moment.entity.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/user/dto/user-where.input.ts:16</a></div>
                             </td>
                         </tr>
 
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Moment title</p>
-</div>
+                        <a name="phone"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            phone</b>
+                            <a href="#phone"><span class="icon ion-ios-link"></span></a>
+                        </span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/StringFilter.html" target="_self" >StringFilter</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {nullable: true, description: &#x27;user phone numberfilter&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/user/dto/user-where.input.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profile"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            profile</b>
+                            <a href="#profile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/UserProfileRelationFilter.html" target="_self" >UserProfileRelationFilter</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {nullable: true, description: &#x27;user profile relation filter&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/user/dto/user-where.input.ts:49</a></div>
+                            </td>
+                        </tr>
+
 
             </tbody>
         </table>
@@ -484,71 +527,61 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, GraphQLISODateTime, ID, ObjectType } from &#x27;@nestjs/graphql&#x27;;
-import { Prisma, User } from &#x27;@prisma/client&#x27;;
-import { UserUnion } from &#x27;src/user/entities/user.union&#x27;;
-import { MomentMedia } from &#x27;./media.entity&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, InputType } from &#x27;@nestjs/graphql&#x27;;
+import { Prisma } from &#x27;@prisma/client&#x27;;
+import { DateTimeFilter, StringFilter } from &#x27;src/graphql&#x27;;
+import { MomentListRelationFilter } from &#x27;src/moment/dto/moment-list-relation.filter&#x27;;
+import { UserProfileRelationFilter } from &#x27;../profile/dto/user-profile-relation.filter&#x27;;
 
-/**
- * Moment entity.
- */
-@ObjectType({
-  description: &#x27;Moment entity&#x27;,
+@InputType({
+  description: &#x27;User where input&#x27;,
 })
-export class MomentEntity
-  implements
-    Prisma.MomentGetPayload&lt;{
-      include: {
-        owner: true;
-      };
-    }&gt; {
-  /**
-   * Moment ID
-   */
-  @Field(() &#x3D;&gt; ID, { description: &#x27;The moment ID&#x27; })
-  id: string;
+export class UserWhereInput
+  implements Omit&lt;Prisma.UserWhereInput, &#x27;password&#x27; | &#x27;authorizationTokens&#x27;&gt; {
+  @Field(() &#x3D;&gt; [UserWhereInput], { nullable: true, description: &#x27;AND where&#x27; })
+  AND?: UserWhereInput[];
 
-  /**
-   * Moment title
-   */
-  @Field(() &#x3D;&gt; String, { description: &#x27;Moment title&#x27;, nullable: true })
-  title: string;
+  @Field(() &#x3D;&gt; [UserWhereInput], { nullable: true, description: &#x27;OR where&#x27; })
+  OR?: UserWhereInput[];
 
-  /**
-   * Moment text content
-   */
-  @Field(() &#x3D;&gt; String, { description: &#x27;Moment content&#x27; })
-  content: string;
+  @Field(() &#x3D;&gt; [UserWhereInput], { nullable: true, description: &#x27;NOT where&#x27; })
+  NOT?: UserWhereInput[];
 
-  /**
-   * Moment media
-   */
-  @Field(() &#x3D;&gt; MomentMedia, { nullable: true, description: &#x27;Moment media&#x27; })
-  media: Prisma.JsonValue;
+  @Field(() &#x3D;&gt; StringFilter, { nullable: true, description: &#x27;ID filter&#x27; })
+  id?: StringFilter;
 
-  /**
-   * Moment created at
-   */
-  @Field(() &#x3D;&gt; GraphQLISODateTime, { description: &#x27;Moment created at&#x27; })
-  createdAt: Date;
+  @Field(() &#x3D;&gt; StringFilter, {
+    nullable: true,
+    description: &#x27;login name filter&#x27;,
+  })
+  login?: StringFilter;
 
-  /**
-   * Moment deleted at
-   */
-  @Field(() &#x3D;&gt; GraphQLISODateTime, { description: &#x27;Moment deleted at&#x27; })
-  deletedAt: Date;
+  @Field(() &#x3D;&gt; StringFilter, { nullable: true, description: &#x27;E-Mail filter&#x27; })
+  email?: StringFilter;
 
-  /**
-   * Moment owner ID
-   */
-  @Field(() &#x3D;&gt; ID, { description: &#x27;Moment owner ID&#x27; })
-  ownerId: string;
+  @Field(() &#x3D;&gt; StringFilter, {
+    nullable: true,
+    description: &#x27;user phone numberfilter&#x27;,
+  })
+  phone?: StringFilter;
 
-  /**
-   * Moment owner
-   */
-  @Field(() &#x3D;&gt; UserUnion, { description: &#x27;The moment owner&#x27; })
-  owner: User;
+  @Field(() &#x3D;&gt; DateTimeFilter, {
+    nullable: true,
+    description: &#x27;created at date time filter&#x27;,
+  })
+  createdAt?: DateTimeFilter;
+
+  @Field(() &#x3D;&gt; UserProfileRelationFilter, {
+    nullable: true,
+    description: &#x27;user profile relation filter&#x27;,
+  })
+  profile?: UserProfileRelationFilter;
+
+  @Field(() &#x3D;&gt; UserProfileRelationFilter, {
+    nullable: true,
+    description: &#x27;user moment list relation filter&#x27;,
+  })
+  moments?: MomentListRelationFilter;
 }
 </code></pre>
     </div>
@@ -578,7 +611,7 @@ export class MomentEntity
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'MomentEntity.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserWhereInput.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

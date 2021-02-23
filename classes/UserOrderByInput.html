@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Classes</li>
-  <li>ViewerEntity</li>
+  <li>UserOrderByInput</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,29 +61,16 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/user/entities/viewer.entity.ts</code>
+            <code>src/user/dto/user-order-by.input.ts</code>
         </p>
 
-            <p class="comment">
-                <h3>Description</h3>
-            </p>
-            <p class="comment">
-                <p>Viewer entity.</p>
 
-            </p>
-
-            <p class="comment">
-                <h3>Extends</h3>
-            </p>
-            <p class="comment">
-                        <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-            </p>
 
             <p class="comment">
                 <h3>Implements</h3>
             </p>
             <p class="comment">
-                        <code>Omit</code>
+                        <code></code>
             </p>
 
 
@@ -100,21 +87,31 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#email">email</a>
-                            </li>
-                            <li>
-                                <a href="#phone">phone</a>
-                            </li>
-                            <li>
+                                    <span class="modifier">Optional</span>
                                 <a href="#createdAt">createdAt</a>
                             </li>
                             <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#email">email</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
                                 <a href="#id">id</a>
                             </li>
                             <li>
+                                    <span class="modifier">Optional</span>
                                 <a href="#login">login</a>
                             </li>
                             <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#password">password</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#phone">phone</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
                                 <a href="#profile">profile</a>
                             </li>
                         </ul>
@@ -140,93 +137,10 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="email"></a>
-                        <span class="name">
-                            <b>
-                            email</b>
-                            <a href="#email"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @Field(undefined, {nullable: true, description: &#x27;User bound E-Mail address.&#x27;})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/user/entities/viewer.entity.ts:22</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User bound E-Mail address.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="phone"></a>
-                        <span class="name">
-                            <b>
-                            phone</b>
-                            <a href="#phone"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @Field(undefined, {nullable: true, description: &#x27;User bound Phone full number.&#x27;})<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/user/entities/viewer.entity.ts:31</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User bound Phone full number.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="createdAt"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Optional</span>
                             createdAt</b>
                             <a href="#createdAt"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -234,7 +148,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                            <i>Type : </i>    <code>Prisma.SortOrder</code>
 
                         </td>
                     </tr>
@@ -243,29 +157,53 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;User registered date at.&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:45</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/user/dto/user-order-by.input.ts:41</a></div>
                             </td>
                         </tr>
 
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>User registered date at.</p>
-</div>
+                        <a name="email"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            email</b>
+                            <a href="#email"><span class="icon ion-ios-link"></span></a>
+                        </span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Prisma.SortOrder</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/user/dto/user-order-by.input.ts:23</a></div>
+                            </td>
+                        </tr>
+
 
             </tbody>
         </table>
@@ -276,6 +214,7 @@
                         <a name="id"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Optional</span>
                             id</b>
                             <a href="#id"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -283,7 +222,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>    <code>Prisma.SortOrder</code>
 
                         </td>
                     </tr>
@@ -292,29 +231,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;User ID&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:28</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/user/dto/user-order-by.input.ts:11</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User ID</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -325,6 +251,7 @@
                         <a name="login"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Optional</span>
                             login</b>
                             <a href="#login"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -332,7 +259,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>    <code>Prisma.SortOrder</code>
 
                         </td>
                     </tr>
@@ -341,29 +268,90 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {nullable: true, description: &#x27;User login name&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:37</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/user/dto/user-order-by.input.ts:17</a></div>
                             </td>
                         </tr>
 
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>User login name</p>
-</div>
+                        <a name="password"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            password</b>
+                            <a href="#password"><span class="icon ion-ios-link"></span></a>
+                        </span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Prisma.SortOrder</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/user/dto/user-order-by.input.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="phone"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Optional</span>
+                            phone</b>
+                            <a href="#phone"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Prisma.SortOrder</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/user/dto/user-order-by.input.ts:29</a></div>
+                            </td>
+                        </tr>
+
 
             </tbody>
         </table>
@@ -374,6 +362,7 @@
                         <a name="profile"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Optional</span>
                             profile</b>
                             <a href="#profile"><span class="icon ion-ios-link"></span></a>
                         </span>
@@ -381,7 +370,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>UserProfile</code>
+                            <i>Type : </i>        <code><a href="../classes/UserProfileOrderByInput.html" target="_self" >UserProfileOrderByInput</a></code>
 
                         </td>
                     </tr>
@@ -390,29 +379,16 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Field(undefined, {description: &#x27;The user profile&#x27;})<br />
+                                @Field(undefined, {nullable: true, description: &#x27;Field sort order&#x27;})<br />
                             </code>
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/UserInterface.html" target="_self" >UserInterface</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/UserInterface.html#source" target="_self" >UserInterface:53</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/user/dto/user-order-by.input.ts:47</a></div>
                             </td>
                         </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>User profile.</p>
-</div>
-                    </td>
-                </tr>
 
             </tbody>
         </table>
@@ -428,37 +404,53 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, ObjectType } from &#x27;@nestjs/graphql&#x27;;
-import { User } from &#x27;@prisma/client&#x27;;
-import { UserInterface } from &#x27;./user.interface&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, InputType } from &#x27;@nestjs/graphql&#x27;;
+import { Prisma } from &#x27;@prisma/client&#x27;;
+import { UserProfileOrderByInput } from &#x27;../profile/dto/user-profile-order-by.input&#x27;;
 
-/**
- * Viewer entity.
- */
-@ObjectType({
-  implements: [UserInterface],
-  description: &#x27;Viewer entity.&#x27;,
-})
-export class ViewerEntity
-  extends UserInterface
-  implements Omit&lt;User, &#x27;password&#x27;&gt; {
-  /**
-   * User bound E-Mail address.
-   */
-  @Field((type) &#x3D;&gt; String, {
+@InputType({ description: &#x27;User order by input&#x27; })
+export class UserOrderByInput implements Prisma.UserOrderByInput {
+  @Field(() &#x3D;&gt; Prisma.SortOrder, {
     nullable: true,
-    description: &#x27;User bound E-Mail address.&#x27;,
+    description: &#x27;Field sort order&#x27;,
   })
-  email: string;
+  id?: Prisma.SortOrder;
 
-  /**
-   * User bound Phone full number.
-   */
-  @Field((type) &#x3D;&gt; String, {
+  @Field(() &#x3D;&gt; Prisma.SortOrder, {
     nullable: true,
-    description: &#x27;User bound Phone full number.&#x27;,
+    description: &#x27;Field sort order&#x27;,
   })
-  phone: string;
+  login?: Prisma.SortOrder;
+
+  @Field(() &#x3D;&gt; Prisma.SortOrder, {
+    nullable: true,
+    description: &#x27;Field sort order&#x27;,
+  })
+  email?: Prisma.SortOrder;
+
+  @Field(() &#x3D;&gt; Prisma.SortOrder, {
+    nullable: true,
+    description: &#x27;Field sort order&#x27;,
+  })
+  phone?: Prisma.SortOrder;
+
+  @Field(() &#x3D;&gt; Prisma.SortOrder, {
+    nullable: true,
+    description: &#x27;Field sort order&#x27;,
+  })
+  password?: Prisma.SortOrder;
+
+  @Field(() &#x3D;&gt; Prisma.SortOrder, {
+    nullable: true,
+    description: &#x27;Field sort order&#x27;,
+  })
+  createdAt?: Prisma.SortOrder;
+
+  @Field(() &#x3D;&gt; UserProfileOrderByInput, {
+    nullable: true,
+    description: &#x27;Field sort order&#x27;,
+  })
+  profile?: UserProfileOrderByInput;
 }
 </code></pre>
     </div>
@@ -488,7 +480,7 @@ export class ViewerEntity
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'ViewerEntity.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserOrderByInput.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
