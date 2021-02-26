@@ -173,7 +173,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, InputType, PartialType, PickType } from &#x27;@nestjs/graphql&#x27;;
 import { Prisma } from &#x27;@prisma/client&#x27;;
-import { ViewerEntity } from &#x27;../entities/viewer.entity&#x27;;
+import { UserEntity } from &#x27;../entities/user.entity&#x27;;
 
 /**
  * User update input.
@@ -183,7 +183,7 @@ import { ViewerEntity } from &#x27;../entities/viewer.entity&#x27;;
 })
 export class UserUpdateInput
   extends PartialType(
-    PickType(ViewerEntity, [&#x27;email&#x27;, &#x27;login&#x27;, &#x27;phone&#x27;]),
+    PickType(UserEntity, [&#x27;email&#x27;, &#x27;login&#x27;, &#x27;phone&#x27;]),
     InputType,
   )
   implements

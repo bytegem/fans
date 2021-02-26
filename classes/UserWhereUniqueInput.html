@@ -96,7 +96,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, ID, InputType, PartialType, PickType } from &#x27;@nestjs/graphql&#x27;;
 import { Prisma } from &#x27;@prisma/client&#x27;;
-import { ViewerEntity } from &#x27;../entities/viewer.entity&#x27;;
+import { UserEntity } from &#x27;../entities/user.entity&#x27;;
 
 /**
  * User where inique input
@@ -106,7 +106,7 @@ import { ViewerEntity } from &#x27;../entities/viewer.entity&#x27;;
 })
 export class UserWhereUniqueInput
   extends PickType(
-    PartialType(ViewerEntity),
+    PartialType(UserEntity),
     [&#x27;id&#x27;, &#x27;login&#x27;, &#x27;email&#x27;, &#x27;phone&#x27;] as const,
     InputType,
   )

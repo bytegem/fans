@@ -89,7 +89,26 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#email">email</a>
+                            </li>
+                            <li>
+                                <a href="#isSetPassword">isSetPassword</a>
+                            </li>
+                            <li>
+                                <a href="#phone">phone</a>
+                            </li>
+                            <li>
+                                <a href="#profile">profile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateViewer">updateViewer</a>
+                            </li>
+                            <li>
                                 <a href="#user">user</a>
+                            </li>
+                            <li>
+                                <a href="#viewer">viewer</a>
                             </li>
                         </ul>
                     </td>
@@ -109,12 +128,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(prismaClient: PrismaClient)</code>
+<code>constructor(prismaClient: PrismaClient, userService: <a href="../injectables/UserService.html">UserService</a>, userProfileService: <a href="../injectables/UserProfileService.html">UserProfileService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/user/user.resolver.ts:12</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/user/user.resolver.ts:42</a></div>
                             </td>
                         </tr>
 
@@ -150,6 +169,36 @@
 </code>
                                                         </td>
                                                 </tr>
+                                                <tr>
+                                                        <td>userService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserService.html" target="_self" >UserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>User service.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>userProfileService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserProfileService.html" target="_self" >UserProfileService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -165,6 +214,437 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="email"></a>
+                    <span class="name">
+                        <b>
+                            email
+                        </b>
+                        <a href="#email"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>email(user: User)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ResolveField(undefined)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/user/user.resolver.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Resolve viewer email field.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                            <code>User</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Parent context user.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSetPassword"></a>
+                    <span class="name">
+                        <b>
+                            isSetPassword
+                        </b>
+                        <a href="#isSetPassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isSetPassword(user: User)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ResolveField(undefined)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="83"
+                            class="link-to-prism">src/user/user.resolver.ts:83</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                            <code>User</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="phone"></a>
+                    <span class="name">
+                        <b>
+                            phone
+                        </b>
+                        <a href="#phone"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>phone(user: User)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ResolveField(undefined)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/user/user.resolver.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Resolver viewer phone field.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                            <code>User</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Parent context user.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="profile"></a>
+                    <span class="name">
+                        <b>
+                            profile
+                        </b>
+                        <a href="#profile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>profile(user: User)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@ResolveField(undefined)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/user/user.resolver.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Resolve user profile field.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                            <code>User</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Parent context user.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateViewer"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            updateViewer
+                        </b>
+                        <a href="#updateViewer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateViewer(context: <a href="../classes/ExecutionContext.html">ExecutionContext</a>, args: <a href="../classes/UpdateViewerArgs.html">UpdateViewerArgs</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Mutation(undefined, {description: &#x27;Update viewer&#x27;})<br />@AuthorizationWith()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/user/user.resolver.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Update viewer.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>context</td>
+                                    <td>
+                                                <code><a href="../classes/ExecutionContext.html" target="_self" >ExecutionContext</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Scofony exection context</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>args</td>
+                                    <td>
+                                                <code><a href="../classes/UpdateViewerArgs.html" target="_self" >UpdateViewerArgs</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Update viewer args.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -194,8 +674,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/user/user.resolver.ts:26</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="185"
+                            class="link-to-prism">src/user/user.resolver.ts:185</a></div>
                 </td>
             </tr>
 
@@ -249,6 +729,90 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewer"></a>
+                    <span class="name">
+                        <b>
+                            viewer
+                        </b>
+                        <a href="#viewer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewer(context: <a href="../classes/ExecutionContext.html">ExecutionContext</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Query(undefined, {description: &#x27;Query the HTTP endpoint Authorization user.&#x27;})<br />@AuthorizationWith()<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/user/user.resolver.ts:104</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Query the HTTP endpoint Authorization user.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>context</td>
+                                    <td>
+                                                <code><a href="../classes/ExecutionContext.html" target="_self" >ExecutionContext</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Socfony execution context.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
 
 
@@ -259,12 +823,42 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Args, Query, Resolver } from &#x27;@nestjs/graphql&#x27;;
-import { PrismaClient } from &#x27;@prisma/client&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Args,
+  Mutation,
+  Parent,
+  Query,
+  ResolveField,
+  Resolver,
+} from &#x27;@nestjs/graphql&#x27;;
+import { PrismaClient, User } from &#x27;@prisma/client&#x27;;
 import { USER_NOT_FOUND } from &#x27;src/constants&#x27;;
 import { UserWhereUniqueInput } from &#x27;./dto&#x27;;
 import { UserEntity } from &#x27;./entities/user.entity&#x27;;
-import { UserUnion } from &#x27;./entities/user.union&#x27;;
+import {
+  SECURITY_COMPARE_FAILED,
+  USER_EMAIL_FIELD_EXISTED,
+  USER_LOGIN_FIELD_EXISTED,
+  USER_PHONE_FIELD_EXISTED,
+} from &#x27;src/constants&#x27;;
+import { UserService } from &#x27;./user.service&#x27;;
+import { AuthorizationWith } from &#x27;src/authorization.decorator&#x27;;
+import { Context } from &#x27;src/context.decorator&#x27;;
+import { ExecutionContext } from &#x27;src/execution-context&#x27;;
+import { UpdateViewerArgs } from &#x27;./dto/update-viewer.args&#x27;;
+import { PasswordHelper } from &#x27;src/helper&#x27;;
+import { UserSecurityCompareType } from &#x27;./enums&#x27;;
+import { UserProfileEntity } from &#x27;./profile/entities/profile.entity&#x27;;
+import { UserProfileService } from &#x27;./profile/profile.service&#x27;;
+
+/**
+ * User error codes.
+ */
+const constants &#x3D; {
+  USER_LOGIN_FIELD_EXISTED,
+  USER_PHONE_FIELD_EXISTED,
+  USER_EMAIL_FIELD_EXISTED,
+};
 
 /**
  * User entity resolver
@@ -273,15 +867,144 @@ import { UserUnion } from &#x27;./entities/user.union&#x27;;
 export class UserResolver {
   /**
    * Create user entity resolver.
+   * @param userService User service.
    * @param prismaClient Prisma client.
    */
-  constructor(private readonly prismaClient: PrismaClient) {}
+  constructor(
+    private readonly prismaClient: PrismaClient,
+    private readonly userService: UserService,
+    private readonly userProfileService: UserProfileService,
+  ) {}
+
+  /**
+   * Resolver viewer phone field.
+   * @param user Parent context user.
+   */
+  @ResolveField(() &#x3D;&gt; String)
+  phone(@Parent() user: User) {
+    const { phone } &#x3D; user;
+    if (phone) {
+      return phone.replace(/(.*)\d{4}(\d{4})/, &#x27;$1****$2&#x27;);
+    }
+
+    return phone;
+  }
+
+  /**
+   * Resolve viewer email field.
+   * @param user Parent context user.
+   */
+  @ResolveField(() &#x3D;&gt; String)
+  email(@Parent() user: User) {
+    const { email } &#x3D; user;
+    if (email) {
+      return email.replace(/^(\w{1}).*?(\w{1}?)\@(.*)$/, &#x27;$1***$2@$3&#x27;);
+    }
+
+    return email;
+  }
+
+  @ResolveField(() &#x3D;&gt; Boolean)
+  isSetPassword(@Parent() user: User) {
+    return !!user.password;
+  }
+
+  /**
+   * Resolve user profile field.
+   * @param user Parent context user.
+   */
+  @ResolveField(() &#x3D;&gt; UserProfileEntity)
+  profile(@Parent() user: User) {
+    return this.userProfileService.resolveProfile(user);
+  }
+
+  /**
+   * Query the HTTP endpoint Authorization user.
+   * @param context Socfony execution context.
+   */
+  @Query(() &#x3D;&gt; UserEntity, {
+    description: &#x27;Query the HTTP endpoint Authorization user.&#x27;,
+  })
+  @AuthorizationWith()
+  viewer(@Context() context: ExecutionContext) {
+    return context.user;
+  }
+
+  /**
+   * Update viewer.
+   * @param context Scofony exection context
+   * @param args Update viewer args.
+   */
+  @Mutation(() &#x3D;&gt; UserEntity, {
+    description: &#x27;Update viewer&#x27;,
+  })
+  @AuthorizationWith()
+  async updateViewer(
+    @Context() context: ExecutionContext,
+    @Args({
+      type: () &#x3D;&gt; UpdateViewerArgs,
+      description: &#x27;Update viewer args.&#x27;,
+    })
+    args: UpdateViewerArgs,
+  ) {
+    const { data, security, type, newPhoneSecurity } &#x3D; args;
+    const { user } &#x3D; context;
+    for await (const key of Object.keys(data)) {
+      // Convert to password hash
+      if (key &#x3D;&#x3D;&#x3D; &#x27;password&#x27;) {
+        data[key] &#x3D; await PasswordHelper.hash(data[key]);
+        continue;
+      }
+
+      // Check whether the unique field is used by other users
+      const other &#x3D; await this.prismaClient.user.findUnique({
+        where: { [key]: data[key] },
+        rejectOnNotFound: false,
+      });
+      if (other &amp;&amp; other.id !&#x3D;&#x3D; user.id) {
+        throw new Error(constants[&#x60;USER_${key.toUpperCase()}_FIELD_EXISTED&#x60;]);
+      }
+
+      // Check whether the new mobile phone number verification code matches
+      if (key &#x3D;&#x3D;&#x3D; &#x27;phone&#x27; &amp;&amp; data[key] !&#x3D;&#x3D; user.phone) {
+        const compared &#x3D; await this.userService.compareSecurity(
+          Object.assign({}, user, { phone: data[key] }),
+          UserSecurityCompareType.SMS_CODE,
+          newPhoneSecurity,
+        );
+        if (compared) {
+          if (compared instanceof Function) {
+            compared();
+          }
+          continue;
+        }
+
+        throw new Error(SECURITY_COMPARE_FAILED);
+      }
+    }
+    const compared &#x3D; await this.userService.compareSecurity(
+      user,
+      type,
+      security,
+    );
+    if (compared) {
+      if (compared instanceof Function) {
+        compared();
+      }
+      return (context.user &#x3D; await this.prismaClient.user.update({
+        where: { id: user.id },
+        data,
+      }));
+    }
+
+    throw new Error(SECURITY_COMPARE_FAILED);
+  }
 
   /**
    * Query a user where unique
    * @param where Query a user where unique
    */
-  @Query(() &#x3D;&gt; UserUnion, {
+  @Query(() &#x3D;&gt; UserEntity, {
     description: &#x27;query where.&#x27;,
   })
   user(

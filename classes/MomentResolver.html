@@ -509,7 +509,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Args, Query, ResolveField, Resolver } from &#x27;@nestjs/graphql&#x27;;
 import { Moment, PrismaClient } from &#x27;@prisma/client&#x27;;
 import { MOMENT_NOT_FOUND, USER_NOT_FOUND } from &#x27;src/constants&#x27;;
-import { UserUnion } from &#x27;src/user/entities/user.union&#x27;;
+import { UserEntity } from &#x27;src/user/entities/user.entity&#x27;;
 import { MomentFindFirstArgs } from &#x27;./dto/moment-find-first.args&#x27;;
 import { MomentFindManyArgs } from &#x27;./dto/moment-find-many.args&#x27;;
 import { MomentWhereUniqueInput } from &#x27;./dto/moment-where-unique.input&#x27;;
@@ -571,7 +571,7 @@ export class MomentResolver {
    * Resolve owner field.
    * @param parent Parent moment object
    */
-  @ResolveField(() &#x3D;&gt; UserUnion)
+  @ResolveField(() &#x3D;&gt; UserEntity)
   owner(parent: Moment) {
     return this.prismaClient.user.findUnique({
       where: { id: parent.ownerId },

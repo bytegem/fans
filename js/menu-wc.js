@@ -131,13 +131,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/UserModule.html" data-type="entity-link">UserModule</a>
                                 <li class="chapter inner">
                                     <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                        'data-target="#injectables-links-module-UserModule-73fa7fd528684d90928d2457c862f45b"' : 'data-target="#xs-injectables-links-module-UserModule-73fa7fd528684d90928d2457c862f45b"' }>
+                                        'data-target="#injectables-links-module-UserModule-89c8a78228198baaf1a07f1e053510da"' : 'data-target="#xs-injectables-links-module-UserModule-89c8a78228198baaf1a07f1e053510da"' }>
                                         <span class="icon ion-md-arrow-round-down"></span>
                                         <span>Injectables</span>
                                         <span class="icon ion-ios-arrow-down"></span>
                                     </div>
-                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-UserModule-73fa7fd528684d90928d2457c862f45b"' :
-                                        'id="xs-injectables-links-module-UserModule-73fa7fd528684d90928d2457c862f45b"' }>
+                                    <ul class="links collapse" ${ isNormalMode ? 'id="injectables-links-module-UserModule-89c8a78228198baaf1a07f1e053510da"' :
+                                        'id="xs-injectables-links-module-UserModule-89c8a78228198baaf1a07f1e053510da"' }>
                                         <li class="link">
                                             <a href="injectables/UserService.html"
                                                 data-type="entity-link" data-context="sub-entity" data-context-id="modules" }>UserService</a>
@@ -249,12 +249,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="classes/UserEntity.html" data-type="entity-link">UserEntity</a>
                             </li>
                             <li class="link">
-                                <a href="classes/UserInterface.html" data-type="entity-link">UserInterface</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/UserInterfaceResolver.html" data-type="entity-link">UserInterfaceResolver</a>
-                            </li>
-                            <li class="link">
                                 <a href="classes/UserOrderByInput.html" data-type="entity-link">UserOrderByInput</a>
                             </li>
                             <li class="link">
@@ -289,12 +283,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="classes/UserWhereUniqueInput.html" data-type="entity-link">UserWhereUniqueInput</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/ViewerEntity.html" data-type="entity-link">ViewerEntity</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/ViewerResolver.html" data-type="entity-link">ViewerResolver</a>
                             </li>
                         </ul>
                     </li>

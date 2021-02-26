@@ -234,16 +234,15 @@
 import { PrismaModule } from &#x27;src/prisma&#x27;;
 import { SecurityModule } from &#x27;src/security/security.module&#x27;;
 import { UserProfileModule } from &#x27;./profile/profile.module&#x27;;
-import { UserInterfaceResolver } from &#x27;./user-interface.resolver&#x27;;
+import { UserResolver } from &#x27;./user.resolver&#x27;;
 import { UserService } from &#x27;./user.service&#x27;;
-import { ViewerResolver } from &#x27;./viewer.resolver&#x27;;
 
 /**
  * User module.
  */
 @Module({
   imports: [PrismaModule, UserProfileModule, SecurityModule],
-  providers: [UserService, UserInterfaceResolver, ViewerResolver],
+  providers: [UserService, UserResolver],
   exports: [UserService],
 })
 export class UserModule {}

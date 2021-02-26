@@ -351,7 +351,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, ID, ObjectType } from &#x27;@nestjs/graphql&#x27;;
 import { Prisma, User } from &#x27;@prisma/client&#x27;;
-import { ViewerEntity } from &#x27;src/user/entities/viewer.entity&#x27;;
+import { UserEntity } from &#x27;src/user/entities/user.entity&#x27;;
 /**
  * HTTP endpoint authorization entity.
  */
@@ -376,7 +376,7 @@ export class AuthorizationTokenEntity
   /**
    * Logged User
    */
-  @Field((type) &#x3D;&gt; ViewerEntity, {
+  @Field((type) &#x3D;&gt; UserEntity, {
     description: &#x27;Logged Viewer entity&#x27;,
   })
   user: User;

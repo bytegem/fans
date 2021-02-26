@@ -486,7 +486,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Field, GraphQLISODateTime, ID, ObjectType } from &#x27;@nestjs/graphql&#x27;;
 import { Prisma, User } from &#x27;@prisma/client&#x27;;
-import { UserUnion } from &#x27;src/user/entities/user.union&#x27;;
+import { UserEntity } from &#x27;src/user/entities/user.entity&#x27;;
 import { MomentMedia } from &#x27;./media.entity&#x27;;
 
 /**
@@ -547,7 +547,7 @@ export class MomentEntity
   /**
    * Moment owner
    */
-  @Field(() &#x3D;&gt; UserUnion, { description: &#x27;The moment owner&#x27; })
+  @Field(() &#x3D;&gt; UserEntity, { description: &#x27;The moment owner&#x27; })
   owner: User;
 }
 </code></pre>
